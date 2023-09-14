@@ -1,0 +1,19 @@
+.general-info {
+    &_header {
+        color: #180B2D;
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.875em !important;
+        font-style: normal !important;
+        line-height: normal !important;
+    }
+
+    &_body {
+        color: #373737;
+        text-align: justify;
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.875em !important;
+        font-style: normal !important;
+        line-height: normal;
+        margin-top: 1em !important;
+    }
+}

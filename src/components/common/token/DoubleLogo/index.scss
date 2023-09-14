@@ -1,0 +1,16 @@
+.double-logo {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &_higher-logo {
+    z-index: 5;
+    position: relative;
+  }
+
+  &_covered-logo {
+    z-index: 3;
+    position: relative;
+  }
+}

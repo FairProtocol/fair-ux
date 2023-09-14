@@ -1,0 +1,50 @@
+.address-list {
+    &_wrapper {
+        display: flex;
+        flex-direction: row;
+        margin: 1em;
+    }
+
+    &_addresses {
+        margin-right: 1em !important;
+    }
+
+    &_auction-id {
+        width: 100% !important;
+
+    }
+
+    &_auction-id-wrapper {
+        margin-bottom: 0rem !important;
+    }
+
+    &_table {
+        margin-top: 2em;
+        padding-bottom: 1em;
+
+        &_search {
+            border-bottom: 0;
+        }
+
+        &_header {
+            padding: 0.5em 2em;
+            background-color: #EAE7FA;
+        }
+
+        &_title {
+            font-size: 0.875rem !important;
+            font-family: Nunito-Sans-Bold !important;
+        }
+
+        &_rows {
+            padding: 0 2em;
+            border-bottom:  1px solid #B9B0ED;
+        }
+
+        &_entry {
+            padding: 1.5em 0;
+            font-size: 0.875rem !important;
+            font-family: Nunito-Sans-Regular !important;
+        }
+    }
+}

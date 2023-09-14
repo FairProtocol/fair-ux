@@ -1,0 +1,36 @@
+.info-card {
+    margin: 0.5em;
+    border-radius: 0.625em;
+    border: 1px solid #5940C1;
+    background: #F9F9FA;
+    height: 3em;
+    padding: 1em 0.75em;
+
+    &_heading {
+        color: #373737;
+        text-align: justify;
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.875em !important;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0em;
+        word-spacing: 0.5px !important;
+        white-space: nowrap;
+    }
+
+    &_stat {
+        color: #180B2D;
+        text-align: justify;
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 1.75em !important;
+        font-style: normal;
+        line-height: normal;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &_loader {
+        margin-top: 0.5em;
+    }
+}

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Nunito-Sans-Light;
+  src: url("./assets/fonts/Nunito-Sans/NunitoSans_7pt-Light.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: Nunito-Sans-Regular;
+  src: url("./assets/fonts/Nunito-Sans/NunitoSans_7pt-Regular.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: Nunito-Sans-Medium;
+  src: url("./assets/fonts/Nunito-Sans/NunitoSans_7pt-Medium.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: Nunito-Sans-Bold;
+  src: url("./assets/fonts/Nunito-Sans/NunitoSans_7pt-Bold.ttf") format("truetype"),
+}
+
+body {
+  margin: 0;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: "Nunito-Sans-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

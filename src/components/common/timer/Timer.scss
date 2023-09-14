@@ -1,0 +1,31 @@
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Add blinking animation for timer
+.blink {
+  @include keyframes(blinker) {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    50.01% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-timing-function: linear;
+  &::before {
+    content: ':';
+  }
+}

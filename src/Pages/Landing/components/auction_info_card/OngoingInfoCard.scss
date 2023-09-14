@@ -1,0 +1,91 @@
+.ongoingAuctions {
+  &_item {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    border: solid #b9b0ed 1px;
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+    max-width: 20em;
+
+    &_container {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.5em;
+    }
+
+    &_bold {
+      font-family: Nunito-Sans-Bold !important;
+    }
+
+    &_timer {
+      color: #000 !important;
+      font-family: Nunito-Sans-Bold !important;
+      font-size: 0.875rem !important;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &_regular {
+      font-family: Nunito-Sans-Regular !important;
+    }
+
+    &_image {
+      margin: 0.5em 1em 0 0;
+    }
+
+    &_details {
+      &_container {
+        display: flex;
+        gap: 0.5em;
+        margin: 0.5em 0 0;
+
+        &_tag {
+          background-color: #180b2d;
+          width: fit-content;
+          border-radius: 0.5em;
+          padding: 0 0.25em;
+          margin-bottom: 0.25em;
+        }
+      }
+
+      &_price {
+        color: rgba(24, 11, 45, 0.5);
+        font-family: Nunito-Sans-Regular !important;
+      }
+    }
+
+    &_ended {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5em;
+
+      &_container {
+        display: flex;
+        gap: 0.375em;
+        align-items: center;
+      }
+
+      &_button {
+        padding: 0;
+        border-radius: 2em;
+        display: flex;
+        background-color: #b9b0ed;
+        border: none;
+      }
+    }
+  }
+
+  @mixin keyframes($name) {
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+  }
+}

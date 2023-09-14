@@ -1,0 +1,66 @@
+.connectbutton {
+  border: none;
+  border-radius: 1.5em;
+  padding: 0.75em 1em;
+  font-family: Nunito-Sans-Bold;
+  font-size: 0.75rem;
+  color: #fff;
+  background-color: #8b8596;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2B1759;
+  }
+
+  &_root {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  &_connected {
+    border: none;
+    border-radius: 1.5em;
+    padding: 0.5em 0.5em; 
+    background-color: #0DD36B;
+    font-size: 0.75rem;
+    font-family: Nunito-Sans-Bold;
+    color: #222;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &_address {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.75em;
+    }
+
+    &_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.25em;
+    }
+
+    &_balance {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0.75em;
+    }
+  }
+}
+
+.vertical_divider {
+  border-left: 0.125em solid #000;
+  height: 2em;
+  border-radius: 1em;
+  position: inherit;
+  transform: scaleY(1.75)
+}

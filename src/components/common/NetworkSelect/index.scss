@@ -1,0 +1,27 @@
+.network-select-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  border: solid #5940c1 1px;
+  color: #5940c1;
+  font-family: Nunito-Sans-Bold;
+  font-size: 0.875rem;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 1rem 0 0 0;
+}
+
+.network-selected {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+
+  &_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+  }
+}

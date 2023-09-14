@@ -1,0 +1,80 @@
+.auctionDetails {
+  &_header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &_divider {
+    margin: 1em 0;
+  }
+
+  &_headerText {
+    margin: 0 0 0 1em;
+    &_heading {
+      font-family: Nunito-Sans-Bold !important;
+      word-spacing: 0.5px !important;
+      font-size: 1.75em !important;
+    }
+
+    &_link {
+      color: #5940c1;
+      font-family: Nunito Sans;
+      font-size: 0.875em;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+    }
+  }
+
+  &_summary {
+    color: #373737 !important;
+    text-align: justify;
+    font-family: Nunito-Sans-Regular !important;
+    font-size: 0.825rem !important;
+    font-style: normal;
+    line-height: normal;
+    margin: 1rem 0 0.5rem !important;
+  }
+
+  &_description {
+    padding: 0.75em !important;
+    border: none !important;
+    border-radius: 0.5em !important;
+
+    &_content {
+      font-family: Nunito-Sans-Regular !important;
+    }
+
+    &_title {
+      font-family: Nunito-Sans-Bold !important;
+    }
+  }
+
+  &_timer {
+    color: #5940c1;
+    text-align: justify;
+    font-family: Nunito-Sans-Bold !important;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  &_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_loader {
+    height: 2rem;
+    width: 12rem;
+    margin-left: 0.625rem;
+  }
+}
+
+.auctionDetails-timer {
+  color: #5940c1 !important;
+  font-family: Nunito-Sans-Bold !important;
+  font-size: 1.75rem !important;
+}

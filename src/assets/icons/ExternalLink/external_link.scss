@@ -1,0 +1,15 @@
+.external-link-icon {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.fill {
+    fill: #222;
+    
+    // Change color on hover
+    &:hover {
+        fill: #5940c1;
+    }
+}

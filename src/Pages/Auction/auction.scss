@@ -1,0 +1,12 @@
+.auction {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #F9F9FA;
+    padding: 1em;
+
+    &_container {
+        max-width: 65em;
+        margin: 0 auto;
+    }
+}

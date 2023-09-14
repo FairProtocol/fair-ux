@@ -1,0 +1,16 @@
+.token-logo {
+  background-color: #606467;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #001429;
+  box-sizing: content-box;
+  overflow: hidden;
+
+  &_image {
+    background: #fff !important;
+    border-radius: 50% !important;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

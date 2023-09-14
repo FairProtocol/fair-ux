@@ -1,0 +1,20 @@
+.orderbook {
+    min-height: 30rem;
+    display: flex !important;
+    flex-direction: column !important;
+
+    &_header {
+        color: #180B2D;
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.875em !important;
+        font-style: normal !important;
+        line-height: normal !important;
+    }
+
+    &_loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}

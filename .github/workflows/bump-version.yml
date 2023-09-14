@@ -1,0 +1,41 @@
+name: "Bump Version"
+on:
+  pull_request:
+    branches:
+      - "master"
+    action: "opened"      
+
+jobs:
+  bump-version:
+    name: "Bump Version on Pull Request Create"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Install jq"
+        run: "sudo apt-get update && sudo apt-get install -y jq"
+      - name: "Checkout source code"
+        uses: "actions/checkout@v2"
+        with:
+          ref: ${{ github.ref }}
+      - name: "Setup Node.js"
+        uses: "actions/setup-node@v1"
+        with:
+          node-version: 16
+      - name: "Automated Version Bump"
+        uses: "Gnosis-Builders/gh-versioner@master"
+        with:
+          tag-prefix: ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Create a public dir if not exists"
+        run: "mkdir -p public"
+      - name: "Create env variable"
+        run: echo "PACKAGE_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+      - name: "Write version information to version.txt"
+        run: echo $PACKAGE_VERSION > public/version.txt
+      - name: "Commit version file"
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: "Fair Version Bumper"
+          author_email: fair@auction.org
+          message: 'Write version information to version.txt'
+          add: 'public'

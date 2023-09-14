@@ -1,0 +1,45 @@
+.auction-info {
+    display: flex !important;
+    flex-direction: column !important;
+
+    &_header {
+        color: #180B2D;
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.875em !important;
+        font-style: normal !important;
+        line-height: normal !important;
+        margin-top: 0.5em !important;
+    }
+
+    &_status {
+        border-radius: 5px;
+        width: 1.5em !important;
+        &_in-progress {
+            background-color: #0DD36B;
+        }
+    }
+
+    &_text {
+        margin-top: 0.5em;
+        &_heading {
+            color: #373737;
+            text-align: justify;
+            font-family: Nunito-Sans-Regular !important;
+            font-size: 0.875em !important;
+            font-style: normal;
+            line-height: normal;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &_subHeading {
+            color: #000;
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 0.875em !important;
+            font-style: normal;
+            line-height: normal;
+        }
+    }
+}

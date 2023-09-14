@@ -1,0 +1,100 @@
+.order-placement {
+  min-height: 30em;
+  display: flex !important;
+  flex-direction: column !important;
+
+  &_header {
+    color: #180b2d !important;
+    font-family: Nunito-Sans-Bold !important;
+    font-size: 0.875em !important;
+    font-style: normal !important;
+    line-height: normal !important;
+    margin-bottom: 1em !important;
+  }
+
+  &_private {
+    margin-top: 1rem !important;
+  }
+
+  &_subheader {
+    color: #000 !important;
+    font-family: Nunito-Sans-Regular !important;
+    font-size: 0.875em !important;
+    font-style: normal !important;
+    line-height: normal !important;
+  }
+
+  &_private-subheader {
+    margin-bottom: 1em !important;
+  }
+
+  &_private-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  &_lock {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 4em !important;
+  }
+
+  &_subheading {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    &_text {
+      font-family: Nunito-Sans-Regular !important;
+      font-size: 0.875em !important;
+      font-style: normal !important;
+      line-height: normal !important;
+    }
+  }
+
+  &_loader {
+    min-height: 23.5em;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  &_button {
+    border-radius: 0.625em !important;
+    background-color: #5940c1 !important;
+    margin-top: 5em !important;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    margin-bottom: 1rem !important;
+
+    &:hover {
+      background-color: #4b2dc2;
+      cursor: pointer;
+      box-shadow: none !important;
+    }
+    &:active {
+      box-shadow: none !important;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
+    }
+  }
+
+  &_empty {
+    margin: 4.4rem 0 !important;
+  }
+
+  &_filler {
+    align-items: stretch !important;
+    flex-grow: 1;
+  }
+}

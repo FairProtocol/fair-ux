@@ -1,0 +1,94 @@
+.confirmation-modal {
+  padding: 2rem;
+  display: flex !important;
+  flex-direction: column !important;
+  position: 'relative' !important;
+
+  &_cross {
+    position: absolute !important;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+
+  &_header {
+    color: #180b2d;
+    font-family: Nunito-Sans-Bold !important;
+    font-size: 0.875em !important;
+    font-style: normal !important;
+    line-height: normal !important;
+    margin-bottom: 1rem !important;
+  }
+
+  &_button-wrap {
+    margin-top: 1rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+  }
+
+  &_wallet-confirm {
+    color: #222;
+    text-align: right !important;
+    font-family: Nunito-Sans-Regular !important;
+    font-size: 0.75rem !important;
+    font-style: normal !important;
+    line-height: normal;
+    margin-top: 0.5rem !important;
+  }
+
+  &_button {
+    border-radius: 0.625rem;
+    background: #5940c1;
+    padding: 0.75rem 2rem;
+    color: #fff;
+    text-align: center;
+    font-family: Nunito-Sans-Bold !important;
+    font-size: 0.875rem !important;
+    font-style: normal;
+    line-height: normal;
+
+    &:hover {
+      background-color: #4b2dc2;
+      cursor: pointer;
+    }
+  }
+
+  &_finished-wrap {
+    margin-top: 2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  &_finished{
+    &_header {
+        margin-top: 1rem !important;
+        color: #180B2D;
+        text-align: center;
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.825rem !important;
+        font-style: normal;
+        line-height: normal;
+        width: 40%;
+    }
+
+    &_link {
+        color: #373737;
+        text-align: center;
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.825rem !important;
+        font-style: normal;
+        line-height: normal;
+        margin-top: 1rem !important;
+        text-decoration: underline;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            color: #4B2DC2;
+        }
+    }
+  }
+}

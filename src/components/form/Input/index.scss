@@ -1,0 +1,16 @@
+.input {
+  &_wrapper {
+    color: #373737 !important;
+    font-size: 0.875rem !important;
+    font-family: Nunito-Sans-Regular !important;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1.5rem !important;
+  }
+
+  &_tooltip {
+    padding: 0 !important;
+    padding-left: 0.5rem !important;
+  }
+}

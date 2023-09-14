@@ -1,0 +1,55 @@
+.row-mobile {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.938rem;
+  color: #000;
+  align-items: center;
+  font-size: 1rem;
+  flex-wrap: wrap;
+
+  > span {
+    margin: 0.5rem 1rem;
+  }
+
+  p {
+    display: flex;
+    margin: 0 0 0.375rem 0;
+    align-items: center;
+    color: #000;
+    font-size: 0.875rem !important;
+    font-family: Nunito-Sans-Bold !important;
+    font-style: normal;
+    line-height: normal;
+  }
+  p + span {
+    display: flex;
+    svg {
+      margin-left: 0.375rem;
+    }
+  }
+}
+
+.row {
+  row-gap: 0.938rem;
+  color: #000;
+  align-items: center;
+  font-size: 1rem;
+  p + span {
+    display: flex;
+    svg {
+      margin-left: 0.375rem;
+    }
+  }
+  > span {
+    line-height: 1;
+  }
+  p {
+    display: none;
+    margin: 0;
+    align-items: center;
+  }
+}
+
+.tooltipComponent {
+  margin-left: 0.375rem;
+}

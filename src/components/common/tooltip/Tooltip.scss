@@ -1,0 +1,20 @@
+.wrapper{
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  margin-bottom: 0.25em;
+
+  .tooltip_icon {
+    .fill {
+      fill: black;
+      transition: fill 0.1s linear;
+    }
+    height: 0.5em;
+  }
+
+  &:hover {
+    .fill {
+      fill: white;
+    }
+  }
+}

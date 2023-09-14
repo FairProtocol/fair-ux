@@ -1,0 +1,23 @@
+.tabs {
+    background-color: #fff;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+
+    &_tab {
+        &:hover {
+          background-color: 'blue'
+        }
+    }
+
+    &_tab-selected {
+        background-color: #E5E1FC;
+        color: blue;
+    }
+
+    &_tab-disabled {
+        opacity: 0.5;
+    }
+}

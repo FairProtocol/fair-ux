@@ -1,0 +1,45 @@
+.claim-order-footer {
+  &_item {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin-top: 1rem !important;
+
+    &_text {
+      color: #000;
+      font-family: Nunito-Sans-Regular !important;
+      font-size: 0.75rem !important;
+      font-style: normal;
+      line-height: normal;
+
+      &_amount {
+        color: #5940c1;
+        font-size: 0.825rem !important;
+      }
+    }
+  }
+
+  &_button-wrap {
+    margin-top: 1rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+  }
+
+  &_button {
+    border-radius: 0.625rem;
+    background: #5940c1;
+    padding: 0.75rem 2rem;
+    color: #fff;
+    text-align: center;
+    font-family: Nunito-Sans-Bold !important;
+    font-size: 0.875rem !important;
+    font-style: normal;
+    line-height: normal;
+
+    &:hover {
+      background-color: #4b2dc2;
+      cursor: pointer;
+    }
+  }
+}

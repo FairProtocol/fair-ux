@@ -1,0 +1,236 @@
+@font-face {
+    font-family: Nunito-Sans-Bold;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Bold.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: Nunito-Sans-Regular;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Regular.ttf") format("truetype"),
+}
+
+.modal {
+    @media only screen and (min-width: 960px) {
+        display: flex;
+        gap: 1em;
+        margin: 0 1em;
+    }
+
+    &_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1em;
+
+        &_text {
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 0.875rem !important;
+            color: #000000 !important;
+        }
+    }
+
+    &_details {
+        flex: 1;
+        padding: 1em 1em 0.5em;
+        border: solid #5940C1 1px;
+        border-radius: 0.5em;
+        margin-bottom: 2em;
+        height: fit-content;
+
+        &_container {
+            flex: 1;
+        }
+
+        &_heading {
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 1rem !important;
+            margin-bottom: 0.5em !important;
+        }
+
+        &_title {
+            font-family: Nunito-Sans-Regular !important;
+            font-size: 0.875rem !important;
+            counter-reset: #000000 !important;
+        }
+
+        &_text {
+            font-family: Nunito-Sans-Regular !important;
+            font-size: 0.875rem !important;
+            margin-bottom: 0.5em !important;
+            color: #373737 !important;
+        }
+    }
+
+    &_button {
+        padding: 0.75em 1.5em;
+        border-radius: 1em;
+        border: solid #5940C1 1px;
+        background-color: #5940C1;
+        color: #FFFFFF;
+        font-family: Nunito-Sans-Bold;
+        font-size: 0.875rem;
+        width: fit-content;
+        margin-left: auto;
+        margin-bottom: 1em;
+        cursor: pointer;
+    }
+}
+
+.create-auction-button {
+    padding: 0.75em 1.5em;
+    border-radius: 1em;
+    border: solid #5940C1 1px;
+    background-color: #5940C1;
+    color: #FFFFFF;
+    font-family: Nunito-Sans-Bold;
+    font-size: 0.875rem;
+    width: fit-content;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 1.5em 0;
+    gap: 1.5em;
+
+    &_input {
+        color: #373737 !important;
+        font-size: 0.875rem !important;
+        font-family: Nunito-Sans-Regular !important;
+
+        &_wrapper {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        &_tooltip {
+            padding: 0 !important;
+            padding-left: 0.5em !important;
+        }
+    }
+
+    &_margin-bottom {
+        margin-bottom: 1.5em;
+    }
+
+    &_switch-title {
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.875rem !important;
+        display: flex !important;
+        gap: 0.5em !important;
+        margin-top: 1.5em !important;
+    }
+
+    &_title {
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.875rem !important;
+        margin-bottom: 1.25em !important;
+        display: flex !important;
+        gap: 0.25em !important;
+    }
+
+    &_text {
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.875rem !important;
+        color: #373737 !important;
+    }
+
+    &_wrapper {
+        border: solid #5940C1 1px;
+        border-radius: 1.25em;
+        padding: 1.5em;
+    }
+
+    &_button {
+        margin-top: 1.25em;
+        padding: 0.75em 1.5em;
+        border-radius: 1em;
+        border: solid #5940C1 1px;
+        color: #5940C1;
+        font-family: Nunito-Sans-Bold;
+        font-size: 0.875rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.sidebar {
+    min-width: 10em;
+    margin-left: 1em;
+
+    &_title {
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.75rem !important;
+        margin: 2em 0 !important;
+    }
+
+    &_item {
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.75rem !important;
+        margin-bottom: 2em !important;
+        color: #949494 !important;
+
+        &_selected {
+            font-family: Nunito-Sans-Bold !important;
+            color: #5940C1 !important;
+            font-size: 0.75rem !important;
+            margin-bottom: 2em !important;
+        }
+    }
+
+}
+
+.create-auction {
+    background-color: #F2F1F9 !important;
+
+    &_container {
+        display: flex;
+        max-width: 65em;
+        margin: 0 auto;
+    }
+
+    &_accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        &_section {
+            font-family: Nunito-Sans-Regular !important;
+            font-size: 0.75rem !important;
+        }
+
+        &_title {
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 0.75rem !important;
+            color: #5940C1 !important;
+        }
+
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &_divider {
+        height: 0.06rem;
+        background-color: #C9C9C9;
+    }
+
+    &_wrapper {
+        margin: 0 1em;
+    }
+
+    &_section {
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.75rem !important;
+        margin-top: 2em !important;
+
+        &_button {
+            cursor: pointer;
+        }
+    }
+}

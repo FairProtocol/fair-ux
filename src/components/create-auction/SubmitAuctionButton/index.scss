@@ -1,0 +1,14 @@
+.submit-auction {
+  &_button {
+    padding: 0.75em 1.5em;
+    border-radius: 1em;
+    border: solid #5940c1 1px;
+    background-color: #5940c1;
+    color: #ffffff;
+    font-family: Nunito-Sans-Bold;
+    font-size: 0.875rem;
+    width: fit-content;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}

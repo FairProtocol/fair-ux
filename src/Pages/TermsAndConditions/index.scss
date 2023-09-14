@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Nunito-Sans-Bold;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Bold.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: Nunito-Sans-Regular;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Regular.ttf") format("truetype"),
+}
+
+.tc {
+    background-color: #FFFFFF;
+    padding: 2em 10% 4em;
+    flex-grow: 1;
+
+    &_title {
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 1.75rem !important;
+        margin-bottom: 0.25em !important;
+    }
+
+    &_text {
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.875rem !important;
+        margin-top: 0.25em !important;
+    }
+
+    &_paragraph {
+        margin: 2em 0 0.5em !important;
+    }
+
+    &_sub-title {
+        font-family: Nunito-Sans-Bold !important;
+        color: #5940C1 !important;
+    }
+
+    &_indentation {
+        margin-left: 2em !important;
+    }
+
+    &_link {
+        color: #5940C1 !important;
+        font-family: Nunito-Sans-Bold !important;
+    }
+}

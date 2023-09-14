@@ -1,0 +1,52 @@
+.auction-graph {
+  align-items: center !important;
+  box-sizing: border-box !important;
+  color: #222;
+  display: flex !important;
+  flex-grow: 1;
+  flex-shrink: 0 !important;
+  justify-content: center !important;
+  position: relative;
+  align-items: stretch !important;
+
+  > div {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 100%;
+
+    > svg {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
+.amcharts-Sprite-group {
+  pointer-events: none;
+}
+
+.amcharts-Label {
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+  color: #333;
+  margin: 10px;
+}
+
+.amcharts-ZoomOutButton-group > .amcharts-RoundedRectangle-group {
+  fill: var(--color-text-active);
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.amcharts-CategoryAxis .amcharts-Label-group > .amcharts-Label,
+.amcharts-ValueAxis-group .amcharts-Label-group > .amcharts-Label {
+  fill: #333;
+}

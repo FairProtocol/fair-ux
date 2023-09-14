@@ -1,0 +1,187 @@
+@font-face {
+    font-family: Nunito-Sans-Bold;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Bold.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: Nunito-Sans-Regular;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Regular.ttf") format("truetype"),
+}
+
+.docs {
+    background-color: #F2F1F9 !important;
+
+    &_accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        &_category {
+            font-family: Nunito-Sans-Regular !important;
+            font-size: 0.75rem !important;
+        }
+
+        &_title {
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 0.75rem !important;
+            color: #5940C1 !important;
+        }
+
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &_sidebar {
+        &_wrapper {
+            margin-left: auto;
+            margin-right: 1em;
+        }
+    }
+
+    &_divider {
+        height: 0.06rem;
+        background-color: #C9C9C9;
+    }
+
+    &_wrapper {
+        margin: 0 1em;
+    }
+
+    &_category {
+        font-family: Nunito-Sans-Bold !important;
+        font-size: 0.75rem !important;
+        margin-top: 2em !important;
+
+        &_button {
+            cursor: pointer;
+        }
+    }
+
+    &_item {
+        font-family: Nunito-Sans-regular !important;
+        font-size: 0.75rem !important;
+        margin: 1em 0 1em 1em !important;
+        color: #949494 !important;
+        white-space: pre !important;
+
+        &_button {
+            cursor: pointer;
+        }
+
+        &_selected {
+            color: #5940C1 !important;
+        }
+    }
+
+    &_details {
+        margin: 2em 1em 5em;
+
+        &_wrapper {
+            max-width: 48em;
+        }
+
+        &_image {
+            width: 100%;
+
+            &_wrapper {
+                padding: 2em 2em 1em;
+                text-align: center;
+            }
+        }
+
+        &_category {
+            margin: 1em 0 !important;
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 0.875rem !important;
+            color: #5940C1 !important;
+        }
+
+        &_title {
+            margin: 0 0 0.5em !important;
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 1.75rem !important;
+        }
+
+        &_text {
+            font-family: Nunito-Sans-Regular !important;
+            font-size: 0.875rem !important;
+            margin-top: 1em !important;
+            max-width: fit-content !important;
+        }
+
+        &_divider {
+            height: 0.06rem;
+            background-color: #C9C9C9;
+            margin: 2em 0;
+        }
+    }
+
+    &_navigation {
+        &_button_left {
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            border: none;
+            float: left !important;
+            cursor: pointer;
+        }
+
+        &_button_right {
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            border: none;
+            float: right !important;
+            margin-top: 0.1em;
+            cursor: pointer;
+        }
+
+        &_text {
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 0.875rem !important;
+            color: #555555 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.5em !important;
+        }
+    }
+
+    &_desktop {
+        display: flex;
+        height: 100%;
+
+        &_parent {
+            background-color: #F2F1F9 !important;
+            padding-left: 5em;
+            padding-top: 1.5em;
+            min-width: 15em;
+            padding-bottom: 2em;
+            width: 50%;
+            display: flex;
+        }
+    }
+}
+
+.one-spacing {
+    padding-left: 2em !important;
+}
+
+.two-spacing {
+    padding-left: 4em !important;
+}
+
+.title-bold {
+    font-weight: 600 !important;
+}
+
+.code {
+    background-color: #F2F1F9 !important;
+    max-width: fit-content !important;
+    margin-left: 2em !important;
+    padding: 0.5em !important;
+    border-radius: 0.25em !important;
+    word-break: break-all !important;
+}

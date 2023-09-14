@@ -1,0 +1,30 @@
+.navbar-nav-link {
+  color: #fff !important;
+  text-decoration: none !important;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem !important;
+
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25rem;
+  font-family: Nunito-Sans-Bold !important;
+
+  padding: 1em 2em;
+  border-radius: 0.675rem;
+
+  &:hover {
+    background-color: #2B1759;
+  }
+
+  &_active {
+    color: #B9B0ED !important;
+  }
+}
+
+.mobile {
+  @media (max-width: 30rem) {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+  }
+}

@@ -1,0 +1,18 @@
+.cell-row {
+  border-bottom: 1px solid #5940C1;
+  column-gap: 10px;
+  display: grid;
+  padding: 10px 15px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+
+  &:last-child,
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &:hover {
+    z-index: 5;
+  }
+}

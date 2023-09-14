@@ -1,0 +1,44 @@
+.place-order-button {
+  border-radius: 0.625em !important;
+  background-color: #5940c1 !important;
+  margin-top: 0.875em !important;
+  height: 4em;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  box-shadow: none !important;
+  text-decoration: none !important;
+
+  &_disabled {
+    background-color: #B9B0ED !important;
+  }
+
+  &_text {
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    font-family: Nunito-Sans-Bold !important;
+    font-size: 0.875em !important;
+    font-style: normal !important;
+    line-height: normal;
+    text-align: center !important;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    text-transform: none !important;
+  }
+
+  &:hover {
+    background-color: #4b2dc2;
+    border: 1px solid #5940c1;
+    cursor: pointer;
+    box-shadow: none !important;
+  }
+  &:active {
+    box-shadow: none !important;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
+  }
+}

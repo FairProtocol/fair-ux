@@ -1,0 +1,45 @@
+.place-order-footer {
+  &_item {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin-top: 0.75rem !important;
+    align-items: center !important;
+    padding: 0.25rem 0 !important;
+
+    &_logo-text {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &_left-margin {
+      margin-left: 0.5rem !important;
+    }
+
+    &_text {
+      color: #000;
+      font-family: Nunito-Sans-Regular !important;
+      font-size: 0.75rem !important;
+      font-style: normal;
+      line-height: normal;
+      text-align: center !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      &_amount {
+        color: #5940C1;
+        font-size: 0.825rem !important;
+      }
+    }
+  }
+
+  &_warning {
+    color: #5940C1;
+    font-family: Nunito-Sans-Regular !important;
+    font-size: 0.75rem !important;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 1rem !important;
+  }
+}

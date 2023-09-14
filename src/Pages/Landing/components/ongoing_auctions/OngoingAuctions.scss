@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Nunito-Sans-Bold;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Bold.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: Nunito-Sans-Regular;
+    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans_7pt-Regular.ttf") format("truetype"),
+}
+
+.ongoing-auctions {
+    background-color: #FFFFFF !important;
+    padding: 3em 0 2em;
+
+    &_root {
+        max-width: 65em;
+        margin: 0 auto;
+    }
+
+    &_title {
+        padding: 1em 0;
+        font-family: Nunito-Sans-Bold !important;
+    }
+
+    &_more {
+        display: flex;
+        justify-content: end;
+
+        &_button {
+            font-family: Nunito-Sans-Bold;
+            font-size: 0.875rem;
+            padding: 1em 3rem;
+            background-color: transparent;
+            border: solid #B9B0ED 1px;
+            border-radius: 0.25em;
+            max-width: 25em;
+            margin: 1em 0 2em;
+            cursor: pointer;
+        }
+    }
+
+    &_auctions {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}

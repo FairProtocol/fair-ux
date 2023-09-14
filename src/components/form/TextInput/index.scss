@@ -1,0 +1,13 @@
+.text-input {
+  color: #373737 !important;
+  font-size: 0.875rem !important;
+  font-family: Nunito-Sans-Regular !important;
+  margin-bottom: 1.5rem;
+
+  &_error {
+    color: #FF6871;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+}

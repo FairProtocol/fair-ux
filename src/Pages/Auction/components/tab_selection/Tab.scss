@@ -1,0 +1,31 @@
+.tab {
+    font-family: Nunito-Sans-Regular, sans-serif;
+    padding: 0.5em 1em !important;
+    color: black;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: transparent;
+    margin: 0.25em;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+        background-color: #f2f0fc;
+    }
+
+    &_icon {
+        margin: 0 0.5em 0 0;
+    }
+
+    &_activated {
+        background-color: #E5E1FC;
+        color: #5940C1;
+
+        &:hover {
+            background-color: #E5E1FC;
+        }
+    }
+}

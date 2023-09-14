@@ -1,0 +1,57 @@
+.price-input {
+    border-radius: 0.625em;
+    border: 1px solid #5940C1;
+    background: #F9F9FA;
+    padding: 1em;
+    margin-top: 1em;
+
+    &_error {
+        border: 1px solid #FF6871;
+    }
+
+    &_error-text {
+        color: #FF6871;
+        font-family: Nunito-Sans-Regular !important;
+        font-size: 0.825rem !important;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    &_header {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.125em;
+        max-width: 10em;
+
+        &_text {
+            color: #373737;
+            text-align: justify;
+            font-family: Nunito-Sans-Regular !important;
+            font-size: 0.875em !important;
+            font-style: normal !important;
+            line-height: normal !important;
+        }
+    }
+
+    &_input {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+
+        &_text {
+            color: #5940C1;
+            text-align: justify;
+            font-family: Nunito-Sans-Bold !important;
+            font-size: 1.75em !important;
+            font-style: normal;
+            line-height: normal;
+
+            &_symbol {
+                color: #373737;
+            }
+        }
+    }
+}
