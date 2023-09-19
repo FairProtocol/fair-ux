@@ -6,6 +6,8 @@ import {
 import { TokenLogosServiceApi, TokenLogosServiceApiInterface } from './TokenLogosServiceApi'
 import {
   GRAPH_API_URL_DEVELOP_AVALANCHE,
+  GRAPH_API_URL_DEVELOP_BASE_MAINNET,
+  GRAPH_API_URL_DEVELOP_BASE_TESTNET,
   GRAPH_API_URL_DEVELOP_BSC,
   GRAPH_API_URL_DEVELOP_BSC_TESTNET,
   GRAPH_API_URL_DEVELOP_FUJI,
@@ -15,6 +17,8 @@ import {
   GRAPH_API_URL_DEVELOP_POLYGON,
   GRAPH_API_URL_DEVELOP_XDAI,
   GRAPH_API_URL_PRODUCTION_AVALANCHE,
+  GRAPH_API_URL_PRODUCTION_BASE_MAINNET,
+  GRAPH_API_URL_PRODUCTION_BASE_TESTNET,
   GRAPH_API_URL_PRODUCTION_BSC,
   GRAPH_API_URL_PRODUCTION_BSC_TESTNET,
   GRAPH_API_URL_PRODUCTION_FUJI,
@@ -53,28 +57,10 @@ function createAdditionalServiceApi(): AdditionalServicesApi {
       graph_url_production: GRAPH_API_URL_PRODUCTION_BSC,
       graph_url_develop: GRAPH_API_URL_DEVELOP_BSC,
     },
-  ]
-  /* eslint-disable @typescript-eslint/no-unused-vars */
-  const devConfig = [
     {
-      networkId: 5,
-      graph_url_production: GRAPH_API_URL_PRODUCTION_GOERLI,
-      graph_url_develop: GRAPH_API_URL_DEVELOP_GOERLI,
-    },
-    {
-      networkId: 80001,
-      graph_url_production: GRAPH_API_URL_PRODUCTION_MUMBAI,
-      graph_url_develop: GRAPH_API_URL_DEVELOP_MUMBAI,
-    },
-    {
-      networkId: 43113,
-      graph_url_production: GRAPH_API_URL_PRODUCTION_FUJI,
-      graph_url_develop: GRAPH_API_URL_DEVELOP_FUJI,
-    },
-    {
-      networkId: 97,
-      graph_url_production: GRAPH_API_URL_PRODUCTION_BSC_TESTNET,
-      graph_url_develop: GRAPH_API_URL_DEVELOP_BSC_TESTNET,
+      networkId: 8453,
+      graph_url_production: GRAPH_API_URL_PRODUCTION_BASE_MAINNET,
+      graph_url_develop: GRAPH_API_URL_DEVELOP_BASE_MAINNET,
     },
   ]
   const config: AdditionalServicesEndpoint[] = [...mainnetConfig]
@@ -101,6 +87,13 @@ function createAdditionalServiceApi(): AdditionalServicesApi {
       networkId: 97,
       graph_url_production: GRAPH_API_URL_PRODUCTION_BSC_TESTNET,
       graph_url_develop: GRAPH_API_URL_DEVELOP_BSC_TESTNET,
+    })
+  }
+  if (isDev && GRAPH_API_URL_DEVELOP_BASE_TESTNET) {
+    config.push({
+      networkId: 84531,
+      graph_url_production: GRAPH_API_URL_PRODUCTION_BASE_TESTNET,
+      graph_url_develop: GRAPH_API_URL_DEVELOP_BASE_TESTNET,
     })
   }
   const dexPriceEstimatorApi = new AdditionalServicesApiImpl(config)

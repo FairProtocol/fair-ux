@@ -10,6 +10,8 @@ import {
   ChainId,
   NETWORK_CONFIGS,
   avalanche,
+  base,
+  baseGoerli,
   bsc,
   gnosis,
   goerli,
@@ -21,8 +23,8 @@ import {
 import { INFURA_KEY, IS_PROD, WALLET_CONNECT_PROJECT_ID } from '../constants/config'
 
 const chainInstance = IS_PROD
-  ? [mainnet, gnosis, polygon, avalanche, bsc]
-  : [polygonMumbai, sepolia, goerli]
+  ? [mainnet, gnosis, polygon, avalanche, bsc, base]
+  : [polygonMumbai, sepolia, goerli, baseGoerli]
 
 // @ts-ignore
 const { chains, publicClient } = configureChains(chainInstance, [

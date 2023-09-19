@@ -2,6 +2,8 @@ import {
   Chain,
   avalanche,
   avalancheFuji,
+  base,
+  baseGoerli,
   bsc,
   bscTestnet,
   gnosis,
@@ -15,6 +17,8 @@ import {
 export {
   avalanche,
   avalancheFuji,
+  base,
+  baseGoerli,
   bsc,
   bscTestnet,
   gnosis,
@@ -36,6 +40,8 @@ export enum ChainId {
   AVALANCHE = 43114,
   FUJI = 43113,
   SEPOLIA = 11155111,
+  BASE = 8453,
+  BASETESTNET = 84531,
 }
 
 export const NETWORK_CONFIGS: {
@@ -51,4 +57,6 @@ export const NETWORK_CONFIGS: {
   [avalanche.id]: avalanche,
   [avalancheFuji.id]: avalancheFuji,
   [sepolia.id]: sepolia,
+  [base.id]: base,
+  [baseGoerli.id]: baseGoerli,
 }
