@@ -6,14 +6,19 @@ const TermsAndConditions: React.FC = () => {
   return (
     <div className="tc">
       <Typography className="tc_title">Terms & Conditions</Typography>
-      <Typography className="tc_text">(Last updated: June 2021)</Typography>
+      <Typography className="tc_text">(Last updated: September 2023)</Typography>
       <Typography className="tc_text tc_paragraph">
         Please read these Terms carefully before participating on our auction platform. These Terms
         tell you who we are, what we offer and what to do if there is a problem and other important
         information. If you think that there is a mistake in these Terms, please contact us to
-        discuss at &nbsp;
-        <a className="tc_link" href="https://forum.gnosis.io/" rel="noreferrer" target="_blank">
-          forum.gnosis.io
+        discuss it at &nbsp;
+        <a
+          className="tc_link"
+          href="https://twitter.com/Fair_Auction"
+          rel="noreferrer"
+          target="_blank"
+        >
+          https://twitter.com/Fair_Auction
         </a>
         .
       </Typography>
@@ -21,19 +26,23 @@ const TermsAndConditions: React.FC = () => {
         Who we are and how to contact us
       </Typography>
       <Typography className="tc_text">
-        1. Fair Protcol is operated by GnosisDAO (“We”). We are an Ethereum based organisation
-        managed by community members. To contact us, please write to us via the GnosisDAO
-        subcategory of &nbsp;
-        <a className="tc_link" href="https://forum.gnosis.io/" rel="noreferrer" target="_blank">
-          forum.gnosis.io
+        1. Fair Protocol is operated by itself (“We”). We are an Ethereum-based organisation managed
+        by community members. To contact us, please message us on Twitter/X at &nbsp;
+        <a
+          className="tc_link"
+          href="https://twitter.com/Fair_Auction"
+          rel="noreferrer"
+          target="_blank"
+        >
+          https://twitter.com/Fair_Auction
         </a>
         .
       </Typography>
       <Typography className="tc_text">
-        2. We use open source products and developer materials from Gnosis Limited and affiliated
-        persons and entities(“Affiliates”) as well as other third parties to provide a Platform to
-        the Fair Protcol Protocol. The provision of the Platform and the Protocol is based solely on
-        our independent actions.
+        2. We use open-source products and developer materials from Gnosis Auction and affiliated
+        persons and entities(“Affiliates”) as well as other third parties to provide a Platform for
+        the Protocol. The provision of the Platform and the Protocol is based solely on our
+        independent actions.
       </Typography>
       <Typography className="tc_text tc_paragraph tc_sub-title">
         Who you are: a business or a consumer
@@ -59,11 +68,11 @@ const TermsAndConditions: React.FC = () => {
       </Typography>
       <Typography className="tc_text">
         {
-          '1. We provide a graphical user interface (the “Platform”) to facilitate you interacting with the Fair Protcol for ERC 20 tokens (the “Protocol”).'
+          '1. We provide a graphical user interface (the “Platform”) to facilitate your interaction with the Auction for ERC 20 tokens (the “Protocol”).'
         }
       </Typography>
       <Typography className="tc_text">
-        2. The Protocol was developed by Gnosis Limited and is governed by a series of smart
+        2. The Protocol was developed by the Fair Protocol team and is governed by a series of smart
         contracts that allow permissionless peer-to-peer auctions between users applying a batch
         auction mechanism and without the need for intermediaries on Ethereum Mainnet, and Ethereum
         Virtual Machine compatible validation mechanisms. We are not a custodian or a counterparty
@@ -113,25 +122,30 @@ const TermsAndConditions: React.FC = () => {
       </Typography>
       <Typography className="tc_text">
         2. A detailed step-by-step guide on how to use the Platform may be found in the{' '}
-        <a className="tc_link" href="#/docs" rel="noreferrer" target="_blank">
-          “Docs” section on the Platform
+        <a
+          className="tc_link"
+          href="https://fairprotocol.eth.limo/#/docs"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Resources” section on the Platform
         </a>
         .
       </Typography>
       <Typography className="tc_text">3. To use the Platform you require:</Typography>
       <Typography className="tc_text tc_indentation">
         a. A wallet compatible with the Ethereum Blockchain or Ethereum Virtual Machine compatible
-        validation mechanisms. We currently only support MetaMask and WalletConnect compatible
+        validation mechanisms. We currently only support MetaMask and WalletConnect-compatible
         wallets. We have not tested compatibility with any other wallet.
       </Typography>
       <Typography className="tc_text tc_indentation">
         b. An ERC 20 token to participate on the buy side of an auction. Buyers can only pay with
-        the ERC 20 token as specified by the third party auctioneer.
+        the ERC 20 token as specified by the third-party auctioneer.
       </Typography>
       <Typography className="tc_text tc_indentation">
-        c. Depending on whether you interact with Gnosis Auction on Ethereum Mainnet or Ethereum
-        Virtual Machine compatible validation mechanisms, sufficient ETH or the networks native
-        crypto asset, respectively, must be in your Wallet to pay for transactions fees, which are
+        c. Depending on whether you interact with Fair Protocol on Ethereum Mainnet or Ethereum
+        Virtual Machine compatible validation mechanisms, sufficient ETH or the network native
+        crypto asset, respectively, must be in your Wallet to pay for transaction fees, which are
         incurred through the Protocol and on the Blockchain.
       </Typography>
       <Typography className="tc_text tc_paragraph tc_sub-title">No fees levied by us</Typography>
@@ -285,8 +299,13 @@ const TermsAndConditions: React.FC = () => {
         3. The website in which you are linking must comply in all respects with the content
         standards set out in these Terms. If you wish to link to or make any use of content on our
         interface other than that set out above, please contact us at{' '}
-        <a className="tc_link" href="https://forum.gnosis.io/" rel="noreferrer" target="_blank">
-          forum.gnosis.io
+        <a
+          className="tc_link"
+          href="https://twitter.com/Fair_Auction"
+          rel="noreferrer"
+          target="_blank"
+        >
+          https://twitter.com/Fair_Auction
         </a>
         .
       </Typography>
@@ -423,11 +442,20 @@ const TermsAndConditions: React.FC = () => {
         How to resolve complaints and disputes
       </Typography>
       <Typography className="tc_text">
-        1. If an alleged breach, controversy, claim, dispute or difference arises out of or in
-        connection with the present Terms between you and us (a “Dispute”), you agree to seek to
-        resolve the matter with us amicably by referring the matter first to GnosisDAO subcategory
-        of the gnosis.forum.io with a detailed description, the date and time the issue arose, your
-        handle to contact you on and the outcome you are seeking.
+        {
+          '1. If an alleged breach, controversy, claim, dispute or difference arises out of or in connection with the present Terms between you and us (a “Dispute”), you agree to seek to resolve the matter with us amicably by referring the matter first to our Twitter/X account('
+        }
+        <a
+          className="tc_link"
+          href="https://twitter.com/Fair_Auction"
+          rel="noreferrer"
+          target="_blank"
+        >
+          https://twitter.com/Fair_Auction
+        </a>
+        {
+          ') with a detailed description, the date and time the issue arose, your handle to contact you on and the outcome you are seeking.'
+        }
       </Typography>
       <Typography className="tc_text">
         2. Your right to take legal action remains unaffected by the existence or use of this
