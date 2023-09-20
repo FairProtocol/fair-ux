@@ -7,43 +7,43 @@ export const GRAPH_API_URL_DEVELOP_GOERLI =
   'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-goerli'
 export const GRAPH_API_URL_PRODUCTION_GOERLI =
   import.meta.env.VITE_GRAPH_API_URL_GOERLI ||
-  'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-goerli'
+  'https://api.studio.thegraph.com/query/48300/fp-goerli/version/latest'
 export const GRAPH_API_URL_DEVELOP_MAINNET =
   import.meta.env.VITE_GRAPH_API_URL_MAINNET ||
   'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-mainnet'
 export const GRAPH_API_URL_PRODUCTION_MAINNET =
   import.meta.env.VITE_GRAPH_API_URL_MAINNET ||
-  'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-mainnet'
+  'https://api.studio.thegraph.com/query/48300/fp-mainnet/version/latest'
 export const GRAPH_API_URL_DEVELOP_POLYGON =
   import.meta.env.VITE_GRAPH_API_URL_POLYGON ||
-  'https://thegraph.com/hosted-service/subgraph/gnosis-auction/ga-mumbai'
+  'https://thegraph.com/hosted-service/subgraph/gnosis-auction/ga-polygon'
 export const GRAPH_API_URL_PRODUCTION_POLYGON =
   import.meta.env.VITE_GRAPH_API_URL_POLYGON ||
-  'https://thegraph.com/hosted-service/subgraph/gnosis-auction/ga-mumbai'
+  'https://api.studio.thegraph.com/query/48300/fp-polygon/version/latest'
 export const GRAPH_API_URL_DEVELOP_XDAI =
   import.meta.env.VITE_GRAPH_API_URL_XDAI ||
-  'https://api.thegraph.com/subgraphs/name/aireshbhat/gnosisauction'
+  'https://api.studio.thegraph.com/query/48300/fp-gnosis/version/latest'
 export const GRAPH_API_URL_PRODUCTION_XDAI =
   import.meta.env.VITE_GRAPH_API_URL_XDAI ||
-  'https://api.thegraph.com/subgraphs/name/aireshbhat/gnosisauction'
+  'https://api.studio.thegraph.com/query/48300/fp-gnosis/version/latest'
 export const GRAPH_API_URL_DEVELOP_MUMBAI =
   import.meta.env.VITE_GRAPH_API_URL_MUMBAI ||
-  'https://api.thegraph.com/subgraphs/name/aireshbhat/gnosisauctionmumbai'
+  'https://api.studio.thegraph.com/query/48300/fp-mumbai/version/latest'
 export const GRAPH_API_URL_PRODUCTION_MUMBAI =
   import.meta.env.VITE_GRAPH_API_URL_MUMBAI ||
-  'https://api.thegraph.com/subgraphs/name/aireshbhat/gnosisauctionmumbai'
+  'https://api.studio.thegraph.com/query/48300/fp-mumbai/version/latest'
 export const GRAPH_API_URL_DEVELOP_AVALANCHE =
   import.meta.env.VITE_GRAPH_API_URL_AVALANCHE ||
   'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-avax'
 export const GRAPH_API_URL_PRODUCTION_AVALANCHE =
   import.meta.env.VITE_GRAPH_API_URL_AVALANCHE ||
-  'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-avax'
+  'https://api.studio.thegraph.com/query/48300/fp-avalanche/version/latest'
 export const GRAPH_API_URL_DEVELOP_FUJI =
   import.meta.env.VITE_GRAPH_API_URL_FUJI ||
   'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-fuji'
 export const GRAPH_API_URL_PRODUCTION_FUJI =
   import.meta.env.VITE_GRAPH_API_URL_FUJI ||
-  'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-fuji'
+  'https://api.studio.thegraph.com/query/48300/fp-avalanche/version/latest'
 export const GRAPH_API_URL_DEVELOP_BSC =
   import.meta.env.VITE_GRAPH_API_URL_BSC ||
   'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-bnb'
@@ -54,6 +54,18 @@ export const GRAPH_API_URL_DEVELOP_BSC_TESTNET =
   import.meta.env.VITE_GRAPH_API_URL_BSC_TESTNET || ''
 export const GRAPH_API_URL_PRODUCTION_BSC_TESTNET =
   import.meta.env.VITE_GRAPH_API_URL_BSC_TESTNET || ''
+export const GRAPH_API_URL_DEVELOP_BASE_TESTNET =
+  import.meta.env.VITE_GRAPH_API_URL_BASE_TESTNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-base-testnet/version/latest'
+export const GRAPH_API_URL_PRODUCTION_BASE_TESTNET =
+  import.meta.env.VITE_GRAPH_API_URL_BASE_TESTNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-base-testnet/version/latest'
+export const GRAPH_API_URL_DEVELOP_BASE_MAINNET =
+  import.meta.env.VITE_GRAPH_API_URL_BASE_MAINNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-base/version/latest'
+export const GRAPH_API_URL_PRODUCTION_BASE_MAINNET =
+  import.meta.env.VITE_GRAPH_API_URL_BASE_MAINNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-base/version/latest'
 
 // Infura bridges like 'https://mainnet.infura.io/v3/...'
 export const NETWORK_URL_GOERLI =

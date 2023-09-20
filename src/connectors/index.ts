@@ -1,4 +1,4 @@
-import { configureChains, createConfig } from 'wagmi'
+import { Chain, configureChains, createConfig } from 'wagmi'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
@@ -10,6 +10,8 @@ import {
   ChainId,
   NETWORK_CONFIGS,
   avalanche,
+  base,
+  baseGoerli,
   bsc,
   gnosis,
   goerli,
@@ -20,9 +22,13 @@ import {
 } from './../utils/networkConfig'
 import { INFURA_KEY, IS_PROD, WALLET_CONNECT_PROJECT_ID } from '../constants/config'
 
-const chainInstance = IS_PROD
-  ? [mainnet, gnosis, polygon, avalanche, bsc]
-  : [polygonMumbai, sepolia, goerli]
+const mainnetChains = [mainnet, gnosis, polygon, avalanche, bsc, base]
+const testnetChains = [polygonMumbai, sepolia, goerli, baseGoerli]
+
+const chainInstance: Chain[] = [...mainnetChains]
+if (!IS_PROD) {
+  chainInstance.push(...testnetChains)
+}
 
 // @ts-ignore
 const { chains, publicClient } = configureChains(chainInstance, [
@@ -36,7 +42,7 @@ const metamaskConnector = new MetaMaskConnector({ chains })
 const coinbaseWalletConnector = new CoinbaseWalletConnector({
   chains,
   options: {
-    appName: 'gnosis-auction',
+    appName: 'fair-protocol',
     jsonRpcUrl: `${mainnet.rpcUrls.public.http}`,
   },
 })
@@ -47,9 +53,9 @@ export const walletConnectConnector = new WC({
   options: {
     projectId: WALLET_CONNECT_PROJECT_ID,
     metadata: {
-      name: 'gnosis-auction',
+      name: 'fair-protocol',
       description: 'Decentralised token price discovery platform',
-      url: 'gnosis-auction.eth',
+      url: 'fair-protocol.eth',
       icons: [],
     },
   },
