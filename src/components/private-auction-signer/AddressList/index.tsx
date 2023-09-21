@@ -6,6 +6,7 @@ import { useNetwork } from 'wagmi'
 import useAuctionWhitelist from '../../../Pages/PrivateAuctionSigner/hooks/useAuctionWhitelist'
 import { useIsTablet } from '../../../hooks/useIsTablet'
 import { usePrivateAuctionSignerForm } from '../../../hooks/usePrivateAuctionSignerForm'
+import { shortenAddress } from '../../../utils/tools'
 import { Cell } from '../../common/table/CellRow/CellRow'
 import Row from '../../common/table/Row/Row'
 import StyledCell from '../../common/table/StyledCell/StyledCell'
@@ -83,7 +84,7 @@ const AddressList = () => {
                   <p>
                     <span>Address</span>
                   </p>
-                  <span>{addressEntry.address}</span>
+                  <span>{shortenAddress(addressEntry.address, 12)}</span>
                 </Cell>
                 <Cell>
                   <p>Network</p>
