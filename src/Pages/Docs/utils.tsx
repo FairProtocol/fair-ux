@@ -68,6 +68,7 @@ export const docsDetails: DocsDetail[] = [
       ['2. Gnosis', 'two-spacing'],
       ['3. Polygon', 'two-spacing'],
       ['4. Avalanche', 'two-spacing'],
+      ['5. BNB chain', 'two-spacing'],
       ['Testnet:', 'one-spacing, title-bold'],
       ['1. Sepolia', 'two-spacing'],
       ['2. Goerli', 'two-spacing'],

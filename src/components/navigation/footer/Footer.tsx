@@ -30,13 +30,13 @@ export const Footer: React.FC = () => {
             spacing={0}
           >
             <Grid item xs={5.5}>
-              <NavBarLink name="Auction" path={routes.auctionList.path}></NavBarLink>
+              <NavBarLink name="Auction" path={routes.auctionList.path} />
             </Grid>
             <Grid item xs={5.5}>
-              <NavBarLink name="Resources" path={routes.docs.path}></NavBarLink>
+              <NavBarLink name="Resources" path={routes.docs.path} />
             </Grid>
             <Grid item xs={5.5}>
-              <NavBarLink name="T&C" path={routes.tc.path}></NavBarLink>
+              <NavBarLink name="T&C" path={routes.tc.path} />
             </Grid>
             <Grid className="footer_button_container_mobile_item" item xs={5.5}>
               <a
