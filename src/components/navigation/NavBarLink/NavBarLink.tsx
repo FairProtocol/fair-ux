@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 import './NavBarLink.scss'
 
-interface NavBarLinkProps {
+export interface NavBarLinkProps {
   path: string
   name?: string
 }

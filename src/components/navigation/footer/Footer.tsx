@@ -1,69 +1,69 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
-import { Grid, useMediaQuery } from '@mui/material'
+import { Grid, Typography, useMediaQuery } from '@mui/material'
 import { Container } from '@mui/system'
+import Discord from 'src/assets/images/discord.svg'
 import Logo from 'src/assets/images/logo.svg'
+import Medium from 'src/assets/images/medium.svg'
+import Telegram from 'src/assets/images/telegram.svg'
+import Twitter from 'src/assets/images/twitter.svg'
 
-import { NavBarLink } from '../NavBarLink/NavBarLink'
+import { NavBarLinkProps } from '../NavBarLink/NavBarLink'
 import { routes } from '../Routes/constants'
 
 import './Footer.scss'
 
+const FooterNavBarLink: React.FC<NavBarLinkProps> = ({ name, path }) => {
+  return (
+    <NavLink
+      className={({ isActive }) =>
+        `footer_navbar footer_navbar_${isActive ? 'active' : 'inactive'}`
+      }
+      to={path}
+    >
+      <span className="footer_navbar_link">{name}</span>
+    </NavLink>
+  )
+}
+
 export const Footer: React.FC = () => {
-  const isMobile = useMediaQuery('(max-width:480px)')
+  const isMobile = useMediaQuery('(max-width:800px)')
 
   return (
     <div className="root" style={{ paddingTop: '2em' }}>
       <Container className="footer footer_bottom" maxWidth="xl">
-        <div className="footer_image_container">
-          <Link to="/start">
-            <img src={Logo} />
-          </Link>
-        </div>
-        {isMobile ? (
-          <Grid
-            alignItems="center"
-            className="footer_button_container_mobile"
-            container
-            justifyContent="center"
-            spacing={0}
-          >
-            <Grid item xs={5.5}>
-              <NavBarLink name="Auction" path={routes.auctionList.path} />
-            </Grid>
-            <Grid item xs={5.5}>
-              <NavBarLink name="Resources" path={routes.docs.path} />
-            </Grid>
-            <Grid item xs={5.5}>
-              <NavBarLink name="T&C" path={routes.tc.path} />
-            </Grid>
-            <Grid className="footer_button_container_mobile_item" item xs={5.5}>
-              <a
-                className="navbar-nav-link navbar-nav-link_inactive"
-                href="https://discord.gg/287DcFss6F"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Discord
-              </a>
-            </Grid>
+        <Grid className="footer_container" container spacing={0}>
+          <Grid className="footer_item" item xs={isMobile ? 12 : 3}>
+            <Link to="/start">
+              <img className="footer_image" src={Logo} />
+            </Link>
           </Grid>
-        ) : (
-          <div className="footer_button_container">
-            <NavBarLink name="Auction" path={routes.auctionList.path}></NavBarLink>
-            <NavBarLink name="Resources" path={routes.docs.path}></NavBarLink>
-            <NavBarLink name="T&C" path={routes.tc.path}></NavBarLink>
-            <a
-              className="navbar-nav-link navbar-nav-link_inactive"
-              href="https://discord.gg/287DcFss6F"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Discord
+          <Grid className="footer_item" item xs={isMobile ? 12 : 3}>
+            <Typography className="footer_title">Auction</Typography>
+            <FooterNavBarLink name="Auction List" path={routes.auctionList.path} />
+            <FooterNavBarLink name="Create Auction" path={routes.createAuction.path} />
+          </Grid>
+          <Grid className="footer_item" item xs={isMobile ? 12 : 3}>
+            <Typography className="footer_title">Resources</Typography>
+            <FooterNavBarLink name="Documentation" path={routes.docs.path} />
+            <FooterNavBarLink name="Terms & Conditions" path={routes.tc.path} />
+          </Grid>
+          <Grid className="footer_item footer_socials" item xs={isMobile ? 12 : 3}>
+            <a href="https://twitter.com/Fair_Auction" rel="noreferrer" target="_blank">
+              <img src={Twitter} />
             </a>
-          </div>
-        )}
+            <a href="https://discord.gg/287DcFss6F" rel="noreferrer" target="_blank">
+              <img src={Discord} />
+            </a>
+            <a href="https://medium.com/@fairprotocol" rel="noreferrer" target="_blank">
+              <img src={Medium} />
+            </a>
+            <a href="https://t.me/FairLaunchProtocol" rel="noreferrer" target="_blank">
+              <img src={Telegram} />
+            </a>
+          </Grid>
+        </Grid>
       </Container>
     </div>
   )
