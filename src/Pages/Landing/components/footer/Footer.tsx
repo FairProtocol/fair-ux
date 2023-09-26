@@ -9,17 +9,30 @@ export const Footer: React.FC = () => {
 
   return (
     <div className="root">
-      <Container className="footer" maxWidth={false} sx={{ marginTop: '3em', marginBottom: '0em' }}>
-        <div className="footer_root">
-          <Grid className="footer_container" container spacing={0}>
+      <Container
+        className="footer-landing"
+        maxWidth={false}
+        sx={{ marginTop: '3em', marginBottom: '0em' }}
+      >
+        <div className="footer-landing_root">
+          <Grid className="footer-landing_container" container spacing={0}>
             <Grid item xs={isTablet ? 12 : 5}>
-              <Typography className="footer_container_title" color={'#FFFFFF'} fontSize="0.875rem">
+              <Typography
+                className="footer-landing_container_title"
+                color={'#FFFFFF'}
+                fontSize="0.875rem"
+              >
                 Decentralised
               </Typography>
-              <Typography className="footer_heading" color={'#FFFFFF'} fontSize="3rem">
-                Equal Access <br></br> for <span className="footer_heading_special">Everyone</span>
+              <Typography className="footer-landing_heading" color={'#FFFFFF'} fontSize="3rem">
+                Equal Access <br></br> for{' '}
+                <span className="footer-landing_heading_special">Everyone</span>
               </Typography>
-              <Typography className="footer_container_text" color={'#FFFFFF'} fontSize="0.75rem">
+              <Typography
+                className="footer-landing_container_text"
+                color={'#FFFFFF'}
+                fontSize="0.75rem"
+              >
                 The go-to fundraising platform for your assets, offering users access to a safe,
                 secure and egalitarian crowdfunding model
               </Typography>
@@ -27,7 +40,7 @@ export const Footer: React.FC = () => {
             <Grid item xs={isTablet ? 0 : 2}></Grid>
             <Grid item xs={isTablet ? 12 : 5}>
               <Typography
-                className="footer_first"
+                className="footer-landing_first"
                 color={'#0DD36B'}
                 fontSize="3rem"
                 textAlign={'right'}
@@ -35,7 +48,7 @@ export const Footer: React.FC = () => {
                 Multiple
               </Typography>
               <Typography
-                className="footer_details_text"
+                className="footer-landing_details_text"
                 color={'#FFFFFF'}
                 fontSize="0.75rem"
                 textAlign={'right'}
@@ -43,7 +56,7 @@ export const Footer: React.FC = () => {
                 EVM Chains
               </Typography>
               <Typography
-                className="footer_details"
+                className="footer-landing_details"
                 color={'#0DD36B'}
                 fontSize="3rem"
                 textAlign={'right'}
@@ -51,7 +64,7 @@ export const Footer: React.FC = () => {
                 Accessible
               </Typography>
               <Typography
-                className="footer_details_text"
+                className="footer-landing_details_text"
                 color={'#FFFFFF'}
                 fontSize="0.75rem"
                 textAlign={'right'}
@@ -59,7 +72,7 @@ export const Footer: React.FC = () => {
                 User Interface
               </Typography>
               <Typography
-                className="footer_details"
+                className="footer-landing_details"
                 color={'#0DD36B'}
                 fontSize="3rem"
                 textAlign={'right'}
@@ -67,7 +80,7 @@ export const Footer: React.FC = () => {
                 Transparent
               </Typography>
               <Typography
-                className="footer_details_text"
+                className="footer-landing_details_text"
                 color={'#FFFFFF'}
                 fontSize="0.75rem"
                 textAlign={'right'}

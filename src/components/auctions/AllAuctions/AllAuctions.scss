@@ -1,13 +1,3 @@
-@font-face {
-    font-family: Nunito-Sans-Bold;
-    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans-Bold.ttf") format("truetype"),
-}
-
-@font-face {
-    font-family: Nunito-Sans-Regular;
-    src: url("../../../../assets/fonts/Nunito-Sans/NunitoSans.ttf") format("truetype"),
-}
-
 .all_auctions {
   &_root {
     max-width: 65em;
@@ -16,7 +6,7 @@
 
   &_title {
       padding: 1em 0;
-      font-family: Nunito-Sans-Bold !important;
+      font-weight: 700;
   }
 
   &_inner_container {

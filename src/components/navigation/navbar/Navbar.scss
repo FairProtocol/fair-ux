@@ -22,7 +22,7 @@
 
         &_heading {
             margin: 2em 2em 0 !important;
-            font-family: Nunito-Sans-Bold !important;
+            font-weight: 700 !important;
         }
 
         &_button {
@@ -40,7 +40,7 @@
     }
 
     &_heading {
-        font-family: Nunito-Sans-Bold !important;
+        font-weight: 700 !important;
     }
 
     &_button {
@@ -48,7 +48,7 @@
         border-radius: 1.5em;
         padding: 1em;
         background-color: transparent;
-        font-family: Nunito-Sans-Bold;
+        font-weight: 700 !important;
         font-size: 0.75rem;
         color: #FFF;
         background-color: #8B8596;

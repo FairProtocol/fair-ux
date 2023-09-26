@@ -15,7 +15,7 @@
     "downlevelIteration": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["vite-plugin-svgr/client", "unplugin-fonts/client"],
     "jsx": "react-jsx"
   },
   "exclude": ["node_modules", "cypress"],

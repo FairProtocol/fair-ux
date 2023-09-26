@@ -1,17 +1,7 @@
-@font-face {
-    font-family: Nunito-Sans-Bold;
-    src: url("../../../assets/fonts/Nunito-Sans/NunitoSans-Bold.ttf") format("truetype"),
-}
-
-@font-face {
-    font-family: Nunito-Sans-Regular;
-    src: url("../../../assets/fonts/Nunito-Sans/NunitoSans.ttf") format("truetype"),
-}
-
 .orders-table {
     &_header {
         color: #180B2D;
-        font-family: Nunito-Sans-Bold !important;
+        font-weight: 700 !important;
         font-size: 0.875em !important;
         font-style: normal !important;
         line-height: normal !important;
@@ -31,14 +21,13 @@
         &_subheading {
             color: #373737;
             text-align: center;
-            font-family: Nunito-Sans-Regular !important;
             font-size: 0.875em !important;
             font-style: normal;
             line-height: normal;
             
 
             &_title {
-                font-family: Nunito-Sans-Bold !important;
+                font-weight: 700 !important;
                 padding-top: 1em;
             }
 

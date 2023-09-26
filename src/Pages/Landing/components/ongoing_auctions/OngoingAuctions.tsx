@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 
 import { routes } from '../../../../components/navigation/Routes/constants'
@@ -38,9 +38,13 @@ export const OngoingAuctions: React.FC = () => {
           ))}
         </Grid>
         <div className="ongoing-auctions_more">
-          <button className="ongoing-auctions_more_button" onClick={navigateToAllAuctions}>
+          <Button
+            className="ongoing-auctions_more_button"
+            onClick={navigateToAllAuctions}
+            variant="outlined"
+          >
             View More
-          </button>
+          </Button>
         </div>
       </div>
     </Container>

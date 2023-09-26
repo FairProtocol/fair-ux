@@ -129,17 +129,18 @@ const AuctionDetails: React.FC = () => {
             size="small"
             sx={{
               paddingLeft: '0.3rem',
+              bgcolor: 'primary.dark',
             }}
           />
           {isPrivateAuction && (
             <Chip
+              color="secondary"
               icon={<Lock />}
               label="Private Auction"
               size="small"
               sx={{
                 paddingLeft: '0.2rem',
                 marginLeft: '1rem',
-                backgroundColor: '#FFC82E',
               }}
             />
           )}

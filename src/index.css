@@ -1,27 +1,7 @@
-@font-face {
-  font-family: Nunito-Sans-Light;
-  src: url("./assets/fonts/Nunito-Sans/NunitoSans-Light.ttf") format("truetype"),
-}
-
-@font-face {
-  font-family: Nunito-Sans-Regular;
-  src: url("./assets/fonts/Nunito-Sans/NunitoSans.ttf") format("truetype"),
-}
-
-@font-face {
-  font-family: Nunito-Sans-Medium;
-  src: url("./assets/fonts/Nunito-Sans/NunitoSans-Medium.ttf") format("truetype"),
-}
-
-@font-face {
-  font-family: Nunito-Sans-Bold;
-  src: url("./assets/fonts/Nunito-Sans/NunitoSans-Bold.ttf") format("truetype"),
-}
-
 body {
   margin: 0;
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: "Nunito-Sans-Regular";
+  font-family: "Nunito Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
