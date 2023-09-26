@@ -130,6 +130,7 @@ const AuctionDetails: React.FC = () => {
             sx={{
               paddingLeft: '0.3rem',
               bgcolor: 'primary.dark',
+              color: 'white',
             }}
           />
           {isPrivateAuction && (
