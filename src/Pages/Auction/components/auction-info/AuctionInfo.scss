@@ -4,7 +4,7 @@
 
     &_header {
         color: #180B2D;
-        font-family: Nunito-Sans-Bold !important;
+        font-weight: 700 !important;
         font-size: 0.875em !important;
         font-style: normal !important;
         line-height: normal !important;
@@ -24,7 +24,6 @@
         &_heading {
             color: #373737;
             text-align: justify;
-            font-family: Nunito-Sans-Regular !important;
             font-size: 0.875em !important;
             font-style: normal;
             line-height: normal;
@@ -36,7 +35,7 @@
 
         &_subHeading {
             color: #000;
-            font-family: Nunito-Sans-Bold !important;
+            font-weight: 700 !important;
             font-size: 0.875em !important;
             font-style: normal;
             line-height: normal;

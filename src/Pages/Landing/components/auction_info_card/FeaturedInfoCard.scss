@@ -22,20 +22,16 @@
         margin: 0.5em 0;
 
         &_bold {
-          font-family: Nunito-Sans-Bold !important;
+          font-weight: 700 !important;
         }
 
         &_timer {
           color: #000 !important;
-          font-family: Nunito-Sans-Bold !important;
+          font-weight: 700 !important;
           font-size: 0.875rem !important;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
-        }
-
-        &_regular {
-          font-family: Nunito-Sans-Regular !important;
         }
 
         &_tag {
@@ -54,7 +50,6 @@
 
       &_price {
         color: rgba(24, 11, 45, 0.5);
-        font-family: Nunito-Sans-Regular !important;
       }
     }
   }

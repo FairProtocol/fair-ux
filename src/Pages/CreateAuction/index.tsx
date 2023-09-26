@@ -167,7 +167,7 @@ const CreateAuction: React.FC = () => {
               documentation to gain a deeper understanding before finalizing any transactions.
             </Typography>
             <button className="content_button" onClick={navigateToDocs}>
-              Read the Docs
+              <Typography variant="inherit">Read the Docs</Typography>
             </button>
           </div>
           {/* Network */}

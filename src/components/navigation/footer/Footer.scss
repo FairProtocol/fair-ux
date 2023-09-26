@@ -1,24 +1,18 @@
-@font-face {
-    font-family: Nunito-Sans-Bold;
-    src: url("../../../assets/fonts/Nunito-Sans/NunitoSans-Bold.ttf") format("truetype"),
-}
-
-@font-face {
-    font-family: Nunito-Sans-Regular;
-    src: url("../../../assets/fonts/Nunito-Sans/NunitoSans.ttf") format("truetype"),
-}
-
 .footer {
     background-color: #180B2D !important;
-    padding: 1em 0 0 !important;
+    max-width: 65em !important;
+    display: flex !important;
+    justify-content: flex-start !important;
 
     &_navbar {
-        display: flex;
-        margin-top: 1em;
+        display: flex !important;
+        margin: 1em auto 0 0 !important;
         text-decoration: none !important;
-        font-family: Nunito-Sans-Regular !important;
         color: #FFFFFF !important;
         font-size: 0.75rem !important;
+
+        padding: 0.25rem 0.5rem !important;
+        border-radius: 0.5em !important;
 
         &:hover {
             background-color: #2B1759;
@@ -34,17 +28,22 @@
         width: 100% !important;
         margin: 0 auto !important;
     }
-
     &_item {
         margin-bottom: 2em !important;
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+
+    &_links {
+        flex-direction: column !important;
     }
 
     &_title {
-        font-family: Nunito-Sans-Bold !important;
+        font-weight: 700 !important;
         color: #FFFFFF !important;
         font-size: 0.75rem !important;
+        padding: 0.25rem 0.5rem !important;
     }
-
     &_socials {
         display: flex !important;
         gap: 1.5em !important;

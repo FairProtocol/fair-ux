@@ -31,7 +31,12 @@ export const Footer: React.FC = () => {
   const isMobile = useMediaQuery('(max-width:800px)')
 
   return (
-    <div className="root" style={{ paddingTop: '2em' }}>
+    <div
+      className="root"
+      style={{
+        paddingTop: '2em',
+      }}
+    >
       <Container className="footer footer_bottom" maxWidth="xl">
         <Grid className="footer_container" container spacing={0}>
           <Grid className="footer_item" item xs={isMobile ? 12 : 3}>
@@ -39,12 +44,12 @@ export const Footer: React.FC = () => {
               <img className="footer_image" src={Logo} />
             </Link>
           </Grid>
-          <Grid className="footer_item" item xs={isMobile ? 12 : 3}>
+          <Grid className="footer_item footer_links" item xs={isMobile ? 12 : 3}>
             <Typography className="footer_title">Auction</Typography>
             <FooterNavBarLink name="Auction List" path={routes.auctionList.path} />
             <FooterNavBarLink name="Create Auction" path={routes.createAuction.path} />
           </Grid>
-          <Grid className="footer_item" item xs={isMobile ? 12 : 3}>
+          <Grid className="footer_item footer_links" item xs={isMobile ? 12 : 3}>
             <Typography className="footer_title">Resources</Typography>
             <FooterNavBarLink name="Documentation" path={routes.docs.path} />
             <FooterNavBarLink name="Terms & Conditions" path={routes.tc.path} />
@@ -59,7 +64,7 @@ export const Footer: React.FC = () => {
             <a href="https://medium.com/@fairprotocol" rel="noreferrer" target="_blank">
               <img src={Medium} />
             </a>
-            <a href="https://t.me/FairLaunchProtocol" rel="noreferrer" target="_blank">
+            <a href="https://t.me/+B871uCbBU7g2MDA1" rel="noreferrer" target="_blank">
               <img src={Telegram} />
             </a>
           </Grid>

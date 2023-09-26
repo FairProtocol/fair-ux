@@ -11,7 +11,6 @@
 
     &_error-text {
         color: #FF6871;
-        font-family: Nunito-Sans-Regular !important;
         font-size: 0.825rem !important;
         font-style: normal;
         line-height: normal;
@@ -28,7 +27,6 @@
         &_text {
             color: #373737;
             text-align: justify;
-            font-family: Nunito-Sans-Regular !important;
             font-size: 0.875em !important;
             font-style: normal !important;
             line-height: normal !important;
@@ -44,7 +42,7 @@
         &_text {
             color: #5940C1;
             text-align: justify;
-            font-family: Nunito-Sans-Bold !important;
+            font-weight: 700 !important;
             font-size: 1.75em !important;
             font-style: normal;
             line-height: normal;

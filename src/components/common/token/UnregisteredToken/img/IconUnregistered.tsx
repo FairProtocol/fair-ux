@@ -22,7 +22,7 @@ export const IconUnregistered: React.FC<{ className?: string }> = (props) => {
       </g>
       <text
         fill="#2B1759"
-        fontFamily="Nunito-Sans-Bold, Averta ☞"
+        fontFamily="Nunito Sans, Averta ☞"
         fontSize="50px"
         fontWeight="700"
         transform="translate(2.5 7.535) translate(34.5 48.465)"

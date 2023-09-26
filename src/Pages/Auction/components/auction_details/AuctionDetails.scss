@@ -12,15 +12,14 @@
   &_headerText {
     margin: 0 0 0 1em;
     &_heading {
-      font-family: Nunito-Sans-Bold !important;
+      font-weight: 700 !important;
       word-spacing: 0.5px !important;
       font-size: 1.75em !important;
     }
 
     &_link {
       color: #5940c1;
-      font-family: Nunito Sans;
-      font-size: 0.875em;
+      font-size: 0.875em !important;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -31,7 +30,6 @@
   &_summary {
     color: #373737 !important;
     text-align: justify;
-    font-family: Nunito-Sans-Regular !important;
     font-size: 0.825rem !important;
     font-style: normal;
     line-height: normal;
@@ -43,19 +41,15 @@
     border: none !important;
     border-radius: 0.5em !important;
 
-    &_content {
-      font-family: Nunito-Sans-Regular !important;
-    }
-
     &_title {
-      font-family: Nunito-Sans-Bold !important;
+      font-weight: 700 !important;
     }
   }
 
   &_timer {
     color: #5940c1;
     text-align: justify;
-    font-family: Nunito-Sans-Bold !important;
+    font-weight: 700 !important;
     font-style: normal;
     line-height: normal;
   }
@@ -75,6 +69,6 @@
 
 .auctionDetails-timer {
   color: #5940c1 !important;
-  font-family: Nunito-Sans-Bold !important;
+  font-weight: 700 !important;
   font-size: 1.75rem !important;
 }

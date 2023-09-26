@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
             <div>
               <button className="hero_button" onClick={navigateToDocs}>
                 <div className="hero_button_root">
-                  Read the docs
+                  <Typography variant="inherit">Read the docs</Typography>
                   <ArrowForwardIosIcon fontSize="small" />
                 </div>
               </button>

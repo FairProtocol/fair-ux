@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 
+import { Typography } from '@mui/material'
 import { ChainIcon, ConnectKitButton } from 'connectkit'
 import { useAccount, useBalance, useNetwork, useSwitchNetwork } from 'wagmi'
 
@@ -53,23 +54,25 @@ export const ConnectButton = () => {
                 <div className="connectbutton_connected_icon">
                   <ChainIcon id={chain?.id} />
                 </div>
-                <span>{elipsify(address as string, 4)}</span>
+                <Typography className="connectbutton_text">
+                  {elipsify(address as string, 4)}
+                </Typography>
               </div>
               <span className="vertical_divider" />
               <div className="connectbutton_connected_balance">
-                <span>
+                <Typography className="connectbutton_text">
                   {abbreviation(data?.formatted, 6)} {data?.symbol}
-                </span>
+                </Typography>
               </div>
             </button>
           )
         }
         return (
           <button className="connectbutton" onClick={() => connectWallet(show as () => void)}>
-            <div className="connectbutton_root">
+            <Typography className="connectbutton_root connectbutton_text">
               Connect Wallet
               <ChevronRight />
-            </div>
+            </Typography>
           </button>
         )
       }}

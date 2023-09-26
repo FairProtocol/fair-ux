@@ -25,11 +25,13 @@ const themeOptions: ThemeOptions = {
     },
     success: {
       main: '#0dd36b',
+      light: '#3ddb88',
+      dark: '#09934a',
     },
     divider: '#b9b0eb',
   },
   typography: {
-    fontFamily: 'Nunito-Sans-Regular',
+    fontFamily: ['Nunito Sans', 'sans-serif', '-apple-system', 'Roboto'].join(','),
   },
   spacing: 8,
   shape: {

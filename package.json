@@ -80,6 +80,7 @@
     "@vitejs/plugin-react": "^2.1.0",
     "sass": "^1.63.6",
     "typescript": "5.0.4",
+    "unplugin-fonts": "^1.0.3",
     "vite": "^3.1.0",
     "vite-plugin-svgr": "^3.2.0"
   }
