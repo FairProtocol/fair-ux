@@ -1,0 +1,36 @@
+.share-auction {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5em !important;
+    padding: 2em !important;
+
+    &_header {
+        color: #180B2D;
+        font-weight: 700 !important;
+        font-size: 0.875em !important;
+        font-style: normal !important;
+        line-height: normal !important;
+    }
+
+    &_copy {
+        color: #000000 !important;
+        border-radius: 0.75em !important;
+    }
+
+    &_socials {
+        &_image {
+            border-radius: 100%;
+            border: 1px #5940C1 solid;
+            padding: 0.5em 1em;
+            margin-right: 1em;
+        }
+
+        // hack
+        &_other-image {
+            padding: 0.5em 0.75em;
+            margin-right: 1em;
+            border: 1px #5940C1 solid;
+            border-radius: 100%;
+        }
+    }
+}
