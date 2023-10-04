@@ -4,9 +4,9 @@ import { useModal } from 'connectkit'
 import { FieldErrors } from 'react-hook-form'
 import { useAccount } from 'wagmi'
 
+import { useAnalyticsEventTracker } from '../../../Pages/App'
 import { LaunchAuctionFormValues } from '../../../Pages/CreateAuction/formConfig'
 import { useAuctionForm } from '../../../hooks/useAuctionForm'
-
 import './index.scss'
 
 interface SubmitAuctionButtonProps {
@@ -16,6 +16,8 @@ interface SubmitAuctionButtonProps {
 export const SubmitAuctionButton: React.FC<SubmitAuctionButtonProps> = ({
   openConfirmationModal,
 }) => {
+  const eventTracker = useAnalyticsEventTracker('Submit: Create Auction')
+
   const { address: account } = useAccount()
   const { setOpen } = useModal()
 
@@ -26,8 +28,9 @@ export const SubmitAuctionButton: React.FC<SubmitAuctionButtonProps> = ({
       setOpen(true)
       return
     }
+    eventTracker('Submit', 'Success')
     openConfirmationModal()
-  }, [setOpen, openConfirmationModal, account])
+  }, [setOpen, openConfirmationModal, account, eventTracker])
 
   const onError = (errors: FieldErrors<LaunchAuctionFormValues>) => {
     if (!account) {
@@ -40,6 +43,7 @@ export const SubmitAuctionButton: React.FC<SubmitAuctionButtonProps> = ({
         // @ts-ignore
         ref: { name },
       } = error
+      eventTracker('Error', name)
       setError(name, { type: 'custom', message })
       // @ts-ignore
       setValue(name, getValues()[name], {

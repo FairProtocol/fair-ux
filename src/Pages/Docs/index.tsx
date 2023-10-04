@@ -25,9 +25,12 @@ import Image9 from 'src/assets/images/image9.png'
 
 import { DocsDetail, DocsItem, docsDetails, docsItems } from './utils'
 import './index.scss'
+import { useAnalyticsEventTracker } from '../App'
 
 const Docs: React.FC = () => {
   const isMobileOrTablet = useMediaQuery('(max-width:960px)')
+
+  const eventTracker = useAnalyticsEventTracker('Resources')
 
   const [expanded, setExpanded] = useState(false)
   const [currentDocsDetailIndex, setCurrentDocsDetailIndex] = useState(0)
@@ -37,15 +40,23 @@ const Docs: React.FC = () => {
   }
 
   const previousItem = () => {
+    const index = currentDocsDetailIndex - 1
+    eventTracker('Previous item', `${docsDetails[index].category}:${docsDetails[index].title}`)
     setCurrentDocsDetailIndex(currentDocsDetailIndex - 1)
   }
 
   const nextItem = () => {
+    const index = currentDocsDetailIndex + 1
+    eventTracker('Next item', `${docsDetails[index].category}:${docsDetails[index].title}`)
     setCurrentDocsDetailIndex(currentDocsDetailIndex + 1)
   }
 
   const goToCategory = (categoryIndex: number) => {
     const docsDetailIndex = docsItems[categoryIndex].starting
+    eventTracker(
+      'Go to category',
+      `${docsDetails[docsDetailIndex].category}:${docsDetails[docsDetailIndex].title}`,
+    )
     setCurrentDocsDetailIndex(docsDetailIndex)
 
     if (isMobileOrTablet) {
@@ -55,6 +66,10 @@ const Docs: React.FC = () => {
 
   const goToItem = (categoryIndex: number, itemIndex: number) => {
     const docsDetailIndex = docsItems[categoryIndex].starting + itemIndex
+    eventTracker(
+      'Go to item',
+      `${docsDetails[docsDetailIndex].category}:${docsDetails[docsDetailIndex].title}`,
+    )
     setCurrentDocsDetailIndex(docsDetailIndex)
 
     if (isMobileOrTablet) {

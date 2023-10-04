@@ -23,11 +23,11 @@ import { OrderDisplay, OrderState, OrderStatus } from '../../../../state/orders/
 import { AuctionIdentifier, AuctionState, DerivedAuctionInfo } from '../../../../state/types'
 import { ChainId, NETWORK_CONFIGS } from '../../../../utils/networkConfig'
 import { abbreviation } from '../../../../utils/numeral'
+import { useAnalyticsEventTracker } from '../../../App'
 import CancelOrderModalFooter from '../cancel-order-modal-footer/CancelOrderModalFooter'
 import ClaimOrderModalFooter from '../claim-order-modal-footer/ClaimOrderModalFooter'
 import ConfirmationModal from '../confirmation-modal/ConfirmationModal'
 import Wrapper from '../wrapper/Wrapper'
-
 import './OrdersTable.scss'
 
 interface OrdersTableProps {
@@ -36,6 +36,8 @@ interface OrdersTableProps {
 }
 
 const OrdersTable: React.FC<OrdersTableProps> = ({ auctionIdentifier, derivedAuctionInfo }) => {
+  const eventTracker = useAnalyticsEventTracker('Auction Details')
+
   const { chainId } = auctionIdentifier
   const { auctionState } = derivedAuctionInfo
   const orders: OrderState | undefined = useOrderState()
@@ -173,8 +175,9 @@ const OrdersTable: React.FC<OrdersTableProps> = ({ auctionIdentifier, derivedAuc
 
   const navigate = useNavigate()
   const navigateToDocs = useCallback(() => {
+    eventTracker('Click on start an auction', '')
     navigate('/docs')
-  }, [navigate])
+  }, [navigate, eventTracker])
   const noAction = hideCancelButton && isClaimButtonDisabled
 
   return (

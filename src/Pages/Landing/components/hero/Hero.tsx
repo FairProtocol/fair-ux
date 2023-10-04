@@ -9,15 +9,19 @@ import TextTransition, { presets } from 'react-text-transition'
 import { chains } from '../../../../connectors'
 import { useIsTablet } from '../../../../hooks/useIsTablet'
 import './Hero.scss'
+import { useAnalyticsEventTracker } from '../../../App'
 
 export const Hero: React.FC = () => {
   const isTablet = useIsTablet()
+  const eventTracker = useAnalyticsEventTracker('Hero')
+
   const [index, setIndex] = React.useState(0)
   const navigate = useNavigate()
 
   const navigateToDocs = useCallback(() => {
+    eventTracker('Read the Docs', '')
     navigate('/docs')
-  }, [navigate])
+  }, [navigate, eventTracker])
 
   useEffect(() => {
     const intervalId = setInterval(

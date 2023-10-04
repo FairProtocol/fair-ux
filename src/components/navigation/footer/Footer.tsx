@@ -9,17 +9,21 @@ import Medium from 'src/assets/images/medium.svg'
 import Telegram from 'src/assets/images/telegram.svg'
 import Twitter from 'src/assets/images/twitter.svg'
 
+import { useAnalyticsEventTracker } from '../../../Pages/App'
 import { NavBarLinkProps } from '../NavBarLink/NavBarLink'
 import { routes } from '../Routes/constants'
 
 import './Footer.scss'
 
 const FooterNavBarLink: React.FC<NavBarLinkProps> = ({ name, path }) => {
+  const eventTracker = useAnalyticsEventTracker('Footer Nav')
+
   return (
     <NavLink
       className={({ isActive }) =>
         `footer_navbar footer_navbar_${isActive ? 'active' : 'inactive'}`
       }
+      onClick={() => eventTracker('Footer nav', name || '')}
       to={path}
     >
       <span className="footer_navbar_link">{name}</span>
@@ -29,6 +33,8 @@ const FooterNavBarLink: React.FC<NavBarLinkProps> = ({ name, path }) => {
 
 export const Footer: React.FC = () => {
   const isMobile = useMediaQuery('(max-width:800px)')
+
+  const eventTracker = useAnalyticsEventTracker('Footer Socials')
 
   return (
     <div
@@ -55,16 +61,36 @@ export const Footer: React.FC = () => {
             <FooterNavBarLink name="Terms & Conditions" path={routes.tc.path} />
           </Grid>
           <Grid className="footer_item footer_socials" item xs={isMobile ? 12 : 3}>
-            <a href="https://twitter.com/Fair_Auction" rel="noreferrer" target="_blank">
+            <a
+              href="https://twitter.com/Fair_Auction"
+              onClick={() => eventTracker('Twitter', '')}
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Twitter} />
             </a>
-            <a href="https://discord.gg/287DcFss6F" rel="noreferrer" target="_blank">
+            <a
+              href="https://discord.gg/287DcFss6F"
+              onClick={() => eventTracker('Discord', '')}
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Discord} />
             </a>
-            <a href="https://medium.com/@fairprotocol" rel="noreferrer" target="_blank">
+            <a
+              href="https://medium.com/@fairprotocol"
+              onClick={() => eventTracker('Medium', '')}
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Medium} />
             </a>
-            <a href="https://t.me/+B871uCbBU7g2MDA1" rel="noreferrer" target="_blank">
+            <a
+              href="https://t.me/+B871uCbBU7g2MDA1"
+              onClick={() => eventTracker('Telegram', '')}
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Telegram} />
             </a>
           </Grid>

@@ -11,14 +11,16 @@ import { useIsTablet } from '../../../../hooks/useIsTablet'
 import { ChainId, NETWORK_CONFIGS } from '../../../../utils/networkConfig'
 import { abbreviation } from '../../../../utils/numeral'
 import { calculateTimeLeft } from '../../../../utils/tools'
-
 import './FeaturedInfoCard.scss'
+import { useAnalyticsEventTracker } from '../../../App'
 
 interface Props {
   auctionInfo: AuctionInfo
 }
 
 export const FeaturedInfoCard: React.FC<Props> = (props) => {
+  const eventTracker = useAnalyticsEventTracker('Select Featured Auction')
+
   const { auctionInfo } = props
   const {
     auctionId,
@@ -45,6 +47,7 @@ export const FeaturedInfoCard: React.FC<Props> = (props) => {
   return (
     <Grid item xs={isTablet ? 5.8 : 2.8}>
       <Link
+        onClick={() => eventTracker(auctionId.toString(), chainId.toString())}
         style={{ textDecoration: 'none' }}
         to={`/auction?auctionId=${auctionId}&chainId=${Number(chainId)}`}
       >

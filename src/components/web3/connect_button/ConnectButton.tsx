@@ -5,6 +5,7 @@ import { Typography } from '@mui/material'
 import { ChainIcon, ConnectKitButton } from 'connectkit'
 import { useAccount, useBalance, useNetwork, useSwitchNetwork } from 'wagmi'
 
+import { useAnalyticsEventTracker } from '../../../Pages/App'
 import { ChevronRight } from '../../../assets/icons/chevron_right/ChevronRight'
 import { NetworkError, useNetworkCheck } from '../../../hooks/useNetworkCheck'
 import { useOrderPlacementState } from '../../../state/orderPlacement/hooks'
@@ -13,7 +14,10 @@ import { elipsify } from '../../../utils/tools'
 import './ConnectButton.scss'
 
 export const ConnectButton = () => {
+  const eventTracker = useAnalyticsEventTracker('Connect Button')
+
   const connectWallet = (show: () => void) => {
+    eventTracker('Click', '')
     show()
   }
 
