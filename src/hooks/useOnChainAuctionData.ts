@@ -2,30 +2,28 @@ import { useContractRead } from 'wagmi'
 
 import { useTokenByAddressAndAutomaticallyAdd } from './useTokenHelpers'
 import easyAuctionABI from '../constants/abis/easyAuction/easyAuction.json'
-import { AuctionIdentifier, SellOrder } from '../state/types'
+import { AuctionIdentifier, OnChainAuctionDataResult, SellOrder } from '../state/types'
 import { decodeSellOrder } from '../utils/decodeSellOrder'
 import { Token } from '../utils/entities/token'
 import { getEasyAuctionAddress } from '../utils/tools'
 
-export interface AuctionDataResult {
-  auctioningToken: string
-  biddingToken: string
-  clearingPriceOrder: string
-  auctionEndDate: number
-}
-
-export function useOnChainAuctionData(auctionIdentifier: AuctionIdentifier): {
+export interface OnChainAuctionData
+  extends Partial<
+    Omit<OnChainAuctionDataResult, 'auctioningToken' | 'biddingToken' | 'clearingPriceOrder'>
+  > {
   auctioningToken?: Maybe<Token>
   biddingToken?: Maybe<Token>
-  clearingPriceSellOrder: Maybe<SellOrder>
+  clearingPriceSellOrder?: Maybe<SellOrder>
   isLoading: boolean
-} {
+}
+
+export function useOnChainAuctionData(auctionIdentifier: AuctionIdentifier): OnChainAuctionData {
   const { auctionId, chainId } = auctionIdentifier
 
   const { data: auctionInfo, isLoading: isLoadingAuctionInfo } = useContractRead<
     typeof easyAuctionABI,
     'auctionData',
-    AuctionDataResult
+    OnChainAuctionDataResult
   >({
     // @ts-ignore
     address: getEasyAuctionAddress(chainId),
@@ -53,10 +51,26 @@ export function useOnChainAuctionData(auctionIdentifier: AuctionIdentifier): {
 
   const isLoading = isLoadingAuctionInfo || isAuctioningTokenLoading || isBiddingTokenLoading
 
+  if (isLoading) {
+    return {
+      auctioningToken,
+      biddingToken,
+      clearingPriceSellOrder,
+      isLoading,
+    }
+  }
+
+  if (auctionInfo) {
+    return {
+      ...auctionInfo,
+      auctioningToken,
+      biddingToken,
+      clearingPriceSellOrder,
+      isLoading,
+    }
+  }
+
   return {
-    auctioningToken,
-    biddingToken,
-    clearingPriceSellOrder,
     isLoading,
   }
 }

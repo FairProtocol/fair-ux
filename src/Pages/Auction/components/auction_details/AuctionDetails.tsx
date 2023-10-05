@@ -80,7 +80,7 @@ const AuctionDetails: React.FC = () => {
   const getStat = () => {
     return `${abbreviation(
       derivedAuctionInfo?.initialAuctionOrder?.sellAmount.toSignificant(4),
-    )} ${getTokenDisplay(derivedAuctionInfo?.biddingToken, chainId)}`
+    )} ${getTokenDisplay(derivedAuctionInfo?.auctioningToken, chainId)}`
   }
 
   return (
