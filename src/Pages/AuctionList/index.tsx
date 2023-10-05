@@ -2,12 +2,13 @@ import React from 'react'
 
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import CheckIcon from '@mui/icons-material/Check'
+import { Tooltip } from '@mui/material'
+import { ChainIcon } from 'connectkit'
 import { useAccount } from 'wagmi'
 
 import AllAuctions from '../../components/auctions/AllAuctions/AllAuctions'
 import Spinner from '../../components/common/spinner/SpinnerLoader'
 import DoubleLogo from '../../components/common/token/DoubleLogo'
-import { Tooltip } from '../../components/common/tooltip/Tooltip'
 import {
   AuctionInfo,
   useAllAuctionInfo,
@@ -53,16 +54,24 @@ const OverviewCommon = ({ allAuctions }: OverviewProps) => {
     tableData.push({
       auctionId: `#${item.auctionId}`,
       buying: item.symbolBiddingToken.slice(0, 7),
-      chainId: NETWORK_CONFIGS[parseInt(item.chainId, 16) as ChainId].name,
+      chainId: (
+        <Tooltip
+          placement="top"
+          title={NETWORK_CONFIGS[parseInt(item.chainId, 16) as ChainId].name}
+        >
+          <span>
+            <ChainIcon id={parseInt(item.chainId, 16)} size={20} />
+          </span>
+        </Tooltip>
+      ),
       chevron: '',
       date: (
-        <>
+        <Tooltip placement="top" title={new Date(item.endTimeTimestamp * 1000).toString()}>
           <span style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
             {new Date(item.endTimeTimestamp * 1000).toLocaleDateString()}
-            <Tooltip text={new Date(item.endTimeTimestamp * 1000).toString()} />
             <ArrowForwardIosIcon fontSize="small" sx={{ color: '000000', marginLeft: '0.5em' }} />
           </span>
-        </>
+        </Tooltip>
       ),
       participation: item.hasParticipation ? (
         <>
