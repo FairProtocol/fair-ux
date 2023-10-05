@@ -35,11 +35,15 @@ import { SummaryInput } from '../../components/create-auction/SummaryInput'
 import { TickerInput } from '../../components/create-auction/TickerInput'
 import { TokenNameInput } from '../../components/create-auction/TokenNameInput'
 import { TwitterUrlInput } from '../../components/create-auction/TwitterUrlInput'
+import { useAnalyticsEventTracker } from '../App'
 
 const sections = ['Launch Auction', 'Network', 'Token', 'Details', 'Auction', 'Social']
 
 const CreateAuction: React.FC = () => {
   const isMobileOrTablet = useMediaQuery('(max-width:960px)')
+
+  const eventTracker = useAnalyticsEventTracker('Create Auction')
+
   const { chain } = useNetwork()
 
   const formMethods = useForm<Required<LaunchAuctionFormValues>>({
@@ -76,8 +80,9 @@ const CreateAuction: React.FC = () => {
 
   const navigate = useNavigate()
   const navigateToDocs = useCallback(() => {
+    eventTracker('Navigate to docs', '')
     navigate('/docs')
-  }, [navigate])
+  }, [navigate, eventTracker])
 
   const { control } = formMethods
 

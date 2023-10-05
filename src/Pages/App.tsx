@@ -1,6 +1,8 @@
 import React, { Suspense, useEffect } from 'react'
 import { HashRouter } from 'react-router-dom'
 
+import ReactGA from 'react-ga4'
+
 import { tokenLogosServiceApi } from '../api'
 import Spinner from '../components/common/spinner/SpinnerLoader'
 import Routes from '../components/navigation/Routes/Routes'
@@ -10,7 +12,18 @@ import { getLogger } from '../utils/logger'
 
 const logger = getLogger('App')
 
+export const useAnalyticsEventTracker = (category: string) => {
+  const eventTracker = (action: string, label: string) => {
+    ReactGA.event({ category, action, label })
+  }
+  return eventTracker
+}
+
 const App: React.FC = () => {
+  const trackingId = '<TRACKING-ID>'
+  ReactGA.initialize(trackingId)
+  ReactGA.send({ hitType: 'pageview', page: 'https://fairprotocol.eth.limo/' })
+
   const { onLoadTokenList } = useTokenListActionHandlers()
 
   // Fetch token logos for all chain IDs

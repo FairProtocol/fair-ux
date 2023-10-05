@@ -6,10 +6,13 @@ import { Container } from '@mui/system'
 
 import { routes } from '../../../../components/navigation/Routes/constants'
 import { useAllAuctionInfo } from '../../../../hooks/useAllAuctionInfos'
+import { useAnalyticsEventTracker } from '../../../App'
 import { OngoingInfoCard } from '../auction_info_card/OngoingInfoCard'
 import './OngoingAuctions.scss'
 
 export const OngoingAuctions: React.FC = () => {
+  const eventTracker = useAnalyticsEventTracker('Ongoing Auctions')
+
   const allAuctions = useAllAuctionInfo()
   const navigate = useNavigate()
 
@@ -23,8 +26,9 @@ export const OngoingAuctions: React.FC = () => {
   )
 
   const navigateToAllAuctions = React.useCallback(() => {
+    eventTracker('All auctions', '')
     navigate(routes.auctionList.path)
-  }, [navigate])
+  }, [navigate, eventTracker])
 
   return (
     <Container className="ongoing-auctions" maxWidth="xl">

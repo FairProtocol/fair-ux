@@ -11,12 +11,15 @@ import { Container } from '@mui/system'
 import { Row, useFilters, useGlobalFilter, usePagination, useTable } from 'react-table'
 
 import './AllAuctions.scss'
+import { useAnalyticsEventTracker } from '../../../Pages/App'
 
 interface Props {
   tableData: any[]
 }
 
 const AllAuctions = (props: Props) => {
+  const eventTracker = useAnalyticsEventTracker('Auction List')
+
   const { tableData, ...restProps } = props
   const columns = useMemo(
     () => [
@@ -222,11 +225,13 @@ const AllAuctions = (props: Props) => {
   const noData = noAuctions || noAuctionsFound
 
   function handleNextPage() {
+    eventTracker('Next list', '')
     nextPage()
     sectionHead.current.scrollIntoView()
   }
 
   function handlePrevPage() {
+    eventTracker('Previous list', '')
     previousPage()
     sectionHead.current.scrollIntoView()
   }
@@ -245,6 +250,7 @@ const AllAuctions = (props: Props) => {
                 <input
                   className="search_input"
                   onChange={(e: any) => {
+                    eventTracker('Search', e.target.value)
                     setGlobalFilter(e.target.value)
                   }}
                   placeholder={`Search Auctions`}
@@ -269,6 +275,7 @@ const AllAuctions = (props: Props) => {
                     <MenuItem
                       key={index}
                       onClick={() => {
+                        eventTracker('Filter', item.title)
                         item.onClick(item.column, item.value)
                         setCurrentDropdownFilter(item.title)
                       }}
@@ -312,6 +319,8 @@ const AllAuctions = (props: Props) => {
                         <NavLink
                           className="row_css"
                           key={i}
+                          // @ts-ignore
+                          onClick={() => eventTracker(row.original['url'], '')}
                           // @ts-ignore
                           to={row.original['url'] ? row.original['url'] : '#'}
                         >
