@@ -88,7 +88,7 @@ export const OngoingInfoCard: React.FC<Props> = (props) => {
                 color={'#000000'}
                 fontSize="0.875rem"
               >
-                {`${auctionSymbolBiddingToken}/${auctionSymbolAuctioningToken}`}
+                {`${auctionSymbolAuctioningToken}/${auctionSymbolBiddingToken}`}
               </Typography>
             </div>
           </div>

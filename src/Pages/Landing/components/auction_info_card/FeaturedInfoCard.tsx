@@ -86,7 +86,7 @@ export const FeaturedInfoCard: React.FC<Props> = (props) => {
               color={'#000000'}
               fontSize="0.875rem"
             >
-              {`${auctionSymbolBiddingToken}/${auctionSymbolAuctioningToken}`}
+              {`${auctionSymbolAuctioningToken}/${auctionSymbolBiddingToken}`}
             </Typography>
             <Typography
               className="featuredInfoCard_item_details_container_bold"
