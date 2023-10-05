@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { Breakpoint, Dialog, Grid, Typography } from '@mui/material'
+import { Breakpoint, Dialog, Grid, Link, Typography } from '@mui/material'
 import { ReactComponent as Cross } from 'src/assets/images/cross.svg'
 import { ReactComponent as SuccessTick } from 'src/assets/images/success-tick.svg'
 import { useNetwork } from 'wagmi'
 
 import { useIsMobile } from '../../../../hooks/useIsMobile'
+import { ExternalLinkDetails } from '../../../../state/types'
 import { getAuctionTitle } from '../../../../utils/auction-helpers'
 import { ChainId } from '../../../../utils/networkConfig'
 import { getExplorerLink } from '../../../../utils/tools'
@@ -23,11 +24,13 @@ interface ConfirmationModalProps {
   titleFinished?: string
   titleWorking?: string
   width?: Breakpoint
+  externalLink?: ExternalLinkDetails
 }
 
 const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
   attemptingTxn,
   content,
+  externalLink,
   hash,
   isOpen,
   onDismiss,
@@ -80,17 +83,28 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
                 {successMessage}
               </Typography>
               {/* TODO: Fix link to add ga-event here */}
-              <a
+              <Link
                 className="confirmation-modal_finished_link"
                 href={getExplorerLink(chainId as ChainId, hash, 'transaction')}
                 rel="noreferrer"
                 target="_blank"
+                underline="hover"
               >
                 {/* @ts-ignore */}
-                <span>
-                  View deployed transaction <u>here</u>
-                </span>
-              </a>
+                <span>View deployed transaction here &gt;</span>
+              </Link>
+              {externalLink && (
+                <Link
+                  className="auction-info_text_heading"
+                  href={externalLink.url}
+                  rel="noreferrer"
+                  target="_blank"
+                  underline="hover"
+                  variant={externalLink.variant}
+                >
+                  {externalLink.text}
+                </Link>
+              )}
             </Grid>
           )}
         </Grid>

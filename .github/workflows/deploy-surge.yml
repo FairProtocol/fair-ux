@@ -1,10 +1,11 @@
 name: Deploy to surge
 
 on:
-  push:
+  pull_request:
+    types: [ opened, reopened, edited ]
     branches:
       - '**'
-      
+
 jobs:
   build:
     name: "Deploy Branch to Surge"
@@ -21,9 +22,37 @@ jobs:
       # Build the project
       - name: Build
         run: yarn build
+        env:
+          VITE_INFURA_ID: ${{ secrets.VITE_INFURA_ID }}
+          VITE_PINATA_KEY: ${{ secrets.VITE_PINATA_KEY }}
+          VITE_PINATA_SECRET: ${{ secrets.VITE_PINATA_SECRET }}
+          VITE_WALLET_CONNECT_PROJECT_ID: ${{ secrets.VITE_WALLET_CONNECT_PROJECT_ID }}
+          VITE_INSTANCE: ${{ secrets.VITE_INSTANCE }}
 
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
       # Deploy to surge
       - name: Install Surge Globally      
         run: npm install --global surge
       - name: Deploy to Surge
         run: surge  ./dist fair-protocol-${{ github.ref_name }}.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      - name: Add comment to PR
+        uses: actions/github-script@v6
+        if: always()
+        with:
+          script: |
+            const name = '${{ github.workflow }}';
+            const url = '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}';
+            const success = '${{ job.status }}' === 'success';
+            const body = `${name}: ${success ? 'succeeded ✅' : 'failed ❌'}\n${url}
+              ${success ? 'Surge url: fair-protocol-${{ steps.extract_branch.outputs.branch }}.surge.sh' : 'Please redeploy after fixing issues!'}
+            `;
+
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            })

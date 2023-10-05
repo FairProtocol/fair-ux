@@ -202,7 +202,7 @@ export const useSubmitAuction = () => {
             discordUrl,
           },
         })
-        return response.hash
+        return { hash: response.hash, auctionId: Number(latestAuctionId) }
       })
       .catch((error) => {
         logger.error(error)

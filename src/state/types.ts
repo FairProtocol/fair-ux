@@ -81,3 +81,42 @@ export interface PricePointDetails {
   totalVolumeFormatted: string
   totalVolumeNumber: number
 }
+
+export interface OnChainAuctionDataResult {
+  auctioningToken: string
+  biddingToken: string
+  orderCancellationEndDate: number
+  clearingPriceOrder: string
+  auctionEndDate: number
+  initialAuctionOrder: string
+  minimumBiddingAmountPerOrder: number
+  interimSumBidAmount: number
+  interimOrder: string
+  volumeClearingPriceOrder: number
+  minFundingThresholdNotReached: boolean
+  isAtomicClosureAllowed: boolean
+  feeNumerator: number
+  minFundingThreshold: number
+}
+
+export type Variant =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'subtitle1'
+  | 'subtitle2'
+  | 'body1'
+  | 'body2'
+  | 'caption'
+  | 'button'
+  | 'overline'
+
+// External link type
+export interface ExternalLinkDetails {
+  url: string
+  text?: string
+  variant?: Variant
+}

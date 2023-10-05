@@ -1,9 +1,11 @@
 import { useCallback, useState } from 'react'
 
-import './index.scss'
+import { useNetwork } from 'wagmi'
+
 import ConfirmationModal from '../../../Pages/Auction/components/confirmation-modal/ConfirmationModal'
 import { useSubmitAuction } from '../../../hooks/useSubmitAuction'
 import ConfirmationModalContent from '../ConfirmationModalContent'
+import './index.scss'
 
 interface LaunchConfirmationModalProps {
   isOpen: boolean
@@ -11,10 +13,13 @@ interface LaunchConfirmationModalProps {
 }
 
 const LaunchConfirmationModal: React.FC<LaunchConfirmationModalProps> = ({ isOpen, setIsOpen }) => {
+  const { chain } = useNetwork()
+  const chainId = chain?.id
   const { initiateNewAuction } = useSubmitAuction()
   const [attemptingTxn, setAttemptingTxn] = useState<boolean>(false) // clicked confirmed
   const [pendingConfirmation, setPendingConfirmation] = useState<boolean>(true) // waiting for user confirmation
   const [txHash, setTxHash] = useState<string>('')
+  const [launchedAuctionId, setLaunchedAuctionId] = useState<number>(60)
 
   const resetModal = useCallback(() => {
     setPendingConfirmation(true)
@@ -26,8 +31,12 @@ const LaunchConfirmationModal: React.FC<LaunchConfirmationModalProps> = ({ isOpe
     setAttemptingTxn(true)
 
     initiateNewAuction()
-      .then((hash: any) => {
-        setTxHash(hash)
+      .then((auctionDetails: { hash: `0x${string}`; auctionId: number } | void) => {
+        if (auctionDetails) {
+          const { auctionId, hash } = auctionDetails
+          setTxHash(hash)
+          setLaunchedAuctionId(auctionId)
+        }
         setPendingConfirmation(false)
       })
       .catch(() => {
@@ -46,6 +55,10 @@ const LaunchConfirmationModal: React.FC<LaunchConfirmationModalProps> = ({ isOpe
           setIsOpen={setIsOpen}
         />
       }
+      externalLink={{
+        url: `#/auction?auctionId=${launchedAuctionId}&chainId=${Number(chainId)}`,
+        text: 'Check your auction page here >',
+      }}
       hash={txHash}
       isOpen={isOpen}
       onDismiss={() => {
@@ -53,7 +66,7 @@ const LaunchConfirmationModal: React.FC<LaunchConfirmationModalProps> = ({ isOpe
         setIsOpen(false)
       }}
       pendingConfirmation={pendingConfirmation}
-      successMessage="Your token has been successfully launched!"
+      successMessage={`Your auction has been successfully launched with Auction ID: ${launchedAuctionId}`}
       title="Confirmation"
       titleFinished="Auction Created!"
       titleWorking="Launching Auction..."
