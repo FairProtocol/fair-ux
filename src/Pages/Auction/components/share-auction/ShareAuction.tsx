@@ -13,7 +13,10 @@ const ShareAuction: React.FC = () => {
   const [shareUrl, setShareUrl] = useState('')
 
   useEffect(() => {
-    setAuctionUrl(window.location.href.replace('#topAnchor', ''))
+    // setAuctionUrl(window.location.href.replace('#topAnchor', ''))
+    setAuctionUrl(window.location.href)
+    console.log('Old Auction URl- ', window.location.href.replace('#topAnchor', ''))
+    console.log('New Auction URl- ', window.location.href)
     // Since '#' and '&' needs to be encoded
     setShareUrl(
       window.location.href.replace('#', '%23').replace('&', '%26').replace('#topAnchor', ''),
