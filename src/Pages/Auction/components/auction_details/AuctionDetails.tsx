@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 
-import { Chip, Grid, Typography } from '@mui/material'
+import { Chip, Grid, Typography, useMediaQuery } from '@mui/material'
 import { ChainIcon } from 'connectkit'
 import ContentLoader from 'react-content-loader'
 import { ReactComponent as Lock } from 'src/assets/images/lock.svg'
@@ -27,6 +27,9 @@ import {
 import Wrapper from '../wrapper/Wrapper'
 
 const AuctionDetails: React.FC = () => {
+  const isMobile = useMediaQuery('(max-width:430px)')
+  const isSmallerMobile = useMediaQuery('(max-width:400px)')
+
   const { search } = useLocation()
   const isMobileOrTablet = useIsMobileOrTablet()
 
@@ -98,7 +101,7 @@ const AuctionDetails: React.FC = () => {
                 symbol: auctionDetails.symbolBiddingToken,
               }}
               className="ongoingAuctions_item_image"
-              size={68}
+              size={isSmallerMobile ? 48 : isMobile ? 58 : 68}
             />
           )}
           {isLoading ? (
