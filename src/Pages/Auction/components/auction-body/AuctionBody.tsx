@@ -9,6 +9,7 @@ import GeneralInfo from '../general-information/GeneralInfo'
 import OrderPlacement from '../order-placement/OrderPlacement'
 import Orderbook from '../orderbook/Orderbook'
 import OrdersTable from '../orders-table/OrdersTable'
+import ShareAuction from '../share-auction/ShareAuction'
 import TabSelection from '../tab_selection/TabSelection'
 
 interface AuctionBodyProps {
@@ -49,7 +50,7 @@ const AuctionBody: React.FC<AuctionBodyProps> = ({ auctionIdentifier, derivedAuc
             derivedAuctionInfo={derivedAuctionInfo}
           />
         </>
-      ) : (
+      ) : tabValue === 1 ? (
         <>
           <Grid container spacing={{ xs: 0, sm: 2 }}>
             <Grid item sm={8} xs={12}>
@@ -60,6 +61,14 @@ const AuctionBody: React.FC<AuctionBodyProps> = ({ auctionIdentifier, derivedAuc
                 auctionIdentifier={auctionIdentifier}
                 derivedAuctionInfo={derivedAuctionInfo}
               />
+            </Grid>
+          </Grid>
+        </>
+      ) : (
+        <>
+          <Grid container spacing={{ xs: 0, sm: 2 }}>
+            <Grid item xs={12}>
+              <ShareAuction />
             </Grid>
           </Grid>
         </>
