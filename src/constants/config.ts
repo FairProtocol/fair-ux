@@ -14,24 +14,30 @@ export const GRAPH_API_URL_DEVELOP_MAINNET =
 export const GRAPH_API_URL_PRODUCTION_MAINNET =
   import.meta.env.VITE_GRAPH_API_URL_MAINNET ||
   'https://api.studio.thegraph.com/query/48300/fp-mainnet/version/latest'
+
+// Polygon subgraph
 export const GRAPH_API_URL_DEVELOP_POLYGON =
   import.meta.env.VITE_GRAPH_API_URL_POLYGON ||
   'https://thegraph.com/hosted-service/subgraph/gnosis-auction/ga-polygon'
 export const GRAPH_API_URL_PRODUCTION_POLYGON =
   import.meta.env.VITE_GRAPH_API_URL_POLYGON ||
   'https://api.studio.thegraph.com/query/48300/fp-polygon/version/latest'
-export const GRAPH_API_URL_DEVELOP_XDAI =
-  import.meta.env.VITE_GRAPH_API_URL_XDAI ||
-  'https://api.studio.thegraph.com/query/48300/fp-gnosis/version/latest'
-export const GRAPH_API_URL_PRODUCTION_XDAI =
-  import.meta.env.VITE_GRAPH_API_URL_XDAI ||
-  'https://api.studio.thegraph.com/query/48300/fp-gnosis/version/latest'
 export const GRAPH_API_URL_DEVELOP_MUMBAI =
   import.meta.env.VITE_GRAPH_API_URL_MUMBAI ||
   'https://api.studio.thegraph.com/query/48300/fp-mumbai/version/latest'
 export const GRAPH_API_URL_PRODUCTION_MUMBAI =
   import.meta.env.VITE_GRAPH_API_URL_MUMBAI ||
   'https://api.studio.thegraph.com/query/48300/fp-mumbai/version/latest'
+
+// xDAI subgraph
+export const GRAPH_API_URL_DEVELOP_XDAI =
+  import.meta.env.VITE_GRAPH_API_URL_XDAI ||
+  'https://api.studio.thegraph.com/query/48300/fp-gnosis/version/latest'
+export const GRAPH_API_URL_PRODUCTION_XDAI =
+  import.meta.env.VITE_GRAPH_API_URL_XDAI ||
+  'https://api.studio.thegraph.com/query/48300/fp-gnosis/version/latest'
+
+// Avalanche subgraph
 export const GRAPH_API_URL_DEVELOP_AVALANCHE =
   import.meta.env.VITE_GRAPH_API_URL_AVALANCHE ||
   'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-avax'
@@ -44,6 +50,8 @@ export const GRAPH_API_URL_DEVELOP_FUJI =
 export const GRAPH_API_URL_PRODUCTION_FUJI =
   import.meta.env.VITE_GRAPH_API_URL_FUJI ||
   'https://api.studio.thegraph.com/query/48300/fp-avalanche/version/latest'
+
+// BSC subgraph
 export const GRAPH_API_URL_DEVELOP_BSC =
   import.meta.env.VITE_GRAPH_API_URL_BSC ||
   'https://api.thegraph.com/subgraphs/name/gnosis-auction/ga-bnb'
@@ -54,6 +62,8 @@ export const GRAPH_API_URL_DEVELOP_BSC_TESTNET =
   import.meta.env.VITE_GRAPH_API_URL_BSC_TESTNET || ''
 export const GRAPH_API_URL_PRODUCTION_BSC_TESTNET =
   import.meta.env.VITE_GRAPH_API_URL_BSC_TESTNET || ''
+
+// Base subgraph
 export const GRAPH_API_URL_DEVELOP_BASE_TESTNET =
   import.meta.env.VITE_GRAPH_API_URL_BASE_TESTNET ||
   'https://api.studio.thegraph.com/query/48300/fp-base-testnet/version/latest'
@@ -67,27 +77,19 @@ export const GRAPH_API_URL_PRODUCTION_BASE_MAINNET =
   import.meta.env.VITE_GRAPH_API_URL_BASE_MAINNET ||
   'https://api.studio.thegraph.com/query/48300/fp-base/version/latest'
 
-// Infura bridges like 'https://mainnet.infura.io/v3/...'
-export const NETWORK_URL_GOERLI =
-  import.meta.env.VITE_NETWORK_URL_GOERLI ||
-  `https://goerli.infura.io/v3/${import.meta.env.VITE_INFURA_ID}`
-export const NETWORK_URL_MAINNET =
-  import.meta.env.VITE_NETWORK_URL_MAINNET ||
-  `https://mainnet.infura.io/v3/${import.meta.env.VITE_INFURA_ID}`
-export const NETWORK_URL_POLYGON =
-  import.meta.env.VITE_NETWORK_URL_POLYGON || 'https://polygon-rpc.com'
-export const NETWORK_URL_XDAI =
-  import.meta.env.VITE_NETWORK_URL_XDAI || 'https://rpc.xdaichain.com/'
-export const NETWORK_URL_MUMBAI =
-  import.meta.env.VITE_NETWORK_URL_MUMBAI || 'https://rpc-mumbai.maticvigil.com/'
-export const NETWORK_URL_AVALANCHE =
-  import.meta.env.VITE_NETWORK_URL_AVALANCHE || 'https://rpc.ankr.com/avalanche'
-export const NETWORK_URL_FUJI =
-  import.meta.env.VITE_NETWORK_URL_FUJI || 'https://rpc.ankr.com/avalanche_fuji'
-export const NETWORK_URL_BSC =
-  import.meta.env.VITE_NETWORK_URL_BSC || 'https://bsc-dataseed.binance.org/'
-export const NETWORK_URL_BSC_TESTNET =
-  import.meta.env.VITE_NETWORK_URL_BSC_TESTNET || 'https://data-seed-prebsc-1-s1.binance.org:8545/'
+// zkSync subgraph
+export const GRAPH_API_URL_DEVELOP_ZKSYNC_TESTNET =
+  import.meta.env.VITE_GRAPH_API_URL_ZKSYNC_TESTNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-zksync-testnet/version/latest'
+export const GRAPH_API_URL_PRODUCTION_ZKSYNC_TESTNET =
+  import.meta.env.VITE_GRAPH_API_URL_ZKSYNC_TESTNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-zksync-testnet/version/latest'
+export const GRAPH_API_URL_DEVELOP_ZKSYNC_MAINNET =
+  import.meta.env.VITE_GRAPH_API_URL_ZKSYNC_MAINNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-zksync/version/latest'
+export const GRAPH_API_URL_PRODUCTION_ZKSYNC_MAINNET =
+  import.meta.env.VITE_GRAPH_API_URL_ZKSYNC_MAINNET ||
+  'https://api.studio.thegraph.com/query/48300/fp-zksync/version/latest'
 
 export const INFURA_KEY = import.meta.env.VITE_INFURA_ID || ''
 export const WALLET_CONNECT_PROJECT_ID = import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID || ''

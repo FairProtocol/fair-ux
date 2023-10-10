@@ -11,6 +11,8 @@ import {
   polygon,
   polygonMumbai,
   sepolia,
+  zkSync,
+  zkSyncTestnet,
 } from '../utils/networkConfig'
 
 export enum SolidityType {
@@ -38,6 +40,8 @@ export const EASY_AUCTION_NETWORKS = {
   [bsc.id]: '0x231F3Fd7c3E3C9a2c8A03B72132c31241DF0a26C',
   [bscTestnet.id]: '0x231F3Fd7c3E3C9a2c8A03B72132c31241DF0a26C',
   [sepolia.id]: '0x231F3Fd7c3E3C9a2c8A03B72132c31241DF0a26C',
+  [zkSync.id]: '0xef6007C1f933EA2CE68c2385646e5F9F88Bd7a53',
+  [zkSyncTestnet.id]: '0x1EddE05b1205Bf9E336B8e8Cf33674EE3FD7b18B',
 }
 
 export const DEPOSIT_AND_PLACE_ORDER = {
@@ -53,6 +57,8 @@ export const DEPOSIT_AND_PLACE_ORDER = {
   [bsc.id]: '0x4bAbb4b89ed7180aeF95F872f621afEE724F0344',
   [bscTestnet.id]: '0x14082EDeFCa073578d2C16E8fB42967bEc188E59',
   [sepolia.id]: '0xDDeFBcF94d46E771dad74882012704f51CA15ed8',
+  [zkSync.id]: '0xC8FEF8fcE092bA7c07a7dD791F1ACD812a48D947',
+  [zkSyncTestnet.id]: '0x25D0d1642ea6Ba7284BC12fE2e4d6a4b57c0Dc55',
 }
 
 export const ALLOW_LIST_OFF_CHAIN_MANAGED = {
@@ -68,6 +74,8 @@ export const ALLOW_LIST_OFF_CHAIN_MANAGED = {
   [bsc.id]: '0xE0AD16EB7Ea467C694E6cFdd5E7D61FE850e8B53',
   [bscTestnet.id]: '0xE0AD16EB7Ea467C694E6cFdd5E7D61FE850e8B53',
   [sepolia.id]: '0xE0AD16EB7Ea467C694E6cFdd5E7D61FE850e8B53',
+  [zkSync.id]: '0x1730C3221C69A332E4DbFbfdD22f16fd887a00C7',
+  [zkSyncTestnet.id]: '0x4B70AC1C00a220a39B03782Cb79D54556Efb8C6E',
 }
 
 export const explorerNames = {
@@ -82,6 +90,8 @@ export const explorerNames = {
   80001: 'Polygscan',
   43114: 'Snowtrace',
   43113: 'Snowtrace',
+  280: 'Zkscan',
+  324: 'Zkscan',
 }
 
 export const unwrapMessage = {
@@ -96,6 +106,8 @@ export const unwrapMessage = {
   80001: `Unwrap WMATIC to MATIC on Quickswap`,
   43114: `Unwrap WAVAX to AVAX on Quickswap`,
   43113: `Unwrap WAVAX to AVAX on Quickswap`,
+  280: `Unwrap WETH to ETH on Uniswap`,
+  324: `Unwrap WETH to ETH on Uniswap`,
 }
 
 export const positiveNumberRegex = /^\d+(\.\d{1,4})?$/

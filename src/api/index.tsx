@@ -16,6 +16,8 @@ import {
   GRAPH_API_URL_DEVELOP_MUMBAI,
   GRAPH_API_URL_DEVELOP_POLYGON,
   GRAPH_API_URL_DEVELOP_XDAI,
+  GRAPH_API_URL_DEVELOP_ZKSYNC_MAINNET,
+  GRAPH_API_URL_DEVELOP_ZKSYNC_TESTNET,
   GRAPH_API_URL_PRODUCTION_AVALANCHE,
   GRAPH_API_URL_PRODUCTION_BASE_MAINNET,
   GRAPH_API_URL_PRODUCTION_BASE_TESTNET,
@@ -27,6 +29,8 @@ import {
   GRAPH_API_URL_PRODUCTION_MUMBAI,
   GRAPH_API_URL_PRODUCTION_POLYGON,
   GRAPH_API_URL_PRODUCTION_XDAI,
+  GRAPH_API_URL_PRODUCTION_ZKSYNC_MAINNET,
+  GRAPH_API_URL_PRODUCTION_ZKSYNC_TESTNET,
   IS_PROD,
 } from '../constants/config'
 
@@ -62,6 +66,11 @@ function createAdditionalServiceApi(): AdditionalServicesApi {
       graph_url_production: GRAPH_API_URL_PRODUCTION_BASE_MAINNET,
       graph_url_develop: GRAPH_API_URL_DEVELOP_BASE_MAINNET,
     },
+    {
+      networkId: 324,
+      graph_url_production: GRAPH_API_URL_PRODUCTION_ZKSYNC_MAINNET,
+      graph_url_develop: GRAPH_API_URL_DEVELOP_ZKSYNC_MAINNET,
+    },
   ]
   const testnetConfig: AdditionalServicesEndpoint[] = [
     {
@@ -88,6 +97,11 @@ function createAdditionalServiceApi(): AdditionalServicesApi {
       networkId: 84531,
       graph_url_production: GRAPH_API_URL_PRODUCTION_BASE_TESTNET,
       graph_url_develop: GRAPH_API_URL_DEVELOP_BASE_TESTNET,
+    },
+    {
+      networkId: 280,
+      graph_url_production: GRAPH_API_URL_PRODUCTION_ZKSYNC_TESTNET,
+      graph_url_develop: GRAPH_API_URL_DEVELOP_ZKSYNC_TESTNET,
     },
   ]
   const config: AdditionalServicesEndpoint[] = [...mainnetConfig]

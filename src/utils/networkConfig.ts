@@ -12,6 +12,8 @@ import {
   polygon,
   polygonMumbai,
   sepolia,
+  zkSync,
+  zkSyncTestnet,
 } from 'wagmi/chains'
 
 export {
@@ -27,6 +29,8 @@ export {
   polygon,
   polygonMumbai,
   sepolia,
+  zkSync,
+  zkSyncTestnet,
 }
 
 export enum ChainId {
@@ -42,6 +46,8 @@ export enum ChainId {
   SEPOLIA = 11155111,
   BASE = 8453,
   BASETESTNET = 84531,
+  ZKSYNC = 324,
+  ZKSYNCTESTNET = 280,
 }
 
 export const NETWORK_CONFIGS: {
@@ -59,4 +65,6 @@ export const NETWORK_CONFIGS: {
   [sepolia.id]: sepolia,
   [base.id]: base,
   [baseGoerli.id]: baseGoerli,
+  [zkSync.id]: zkSync,
+  [zkSyncTestnet.id]: zkSyncTestnet,
 }
