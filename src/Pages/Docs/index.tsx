@@ -10,37 +10,25 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material'
-import Image1 from 'src/assets/images/image1.png'
-import Image10 from 'src/assets/images/image10.png'
-import Image11 from 'src/assets/images/image11.png'
-import Image12 from 'src/assets/images/image12.png'
-import Image2 from 'src/assets/images/image2.png'
-import Image3 from 'src/assets/images/image3.png'
-import Image4 from 'src/assets/images/image4.png'
-import Image5 from 'src/assets/images/image5.png'
-import Image6 from 'src/assets/images/image6.png'
-import Image7 from 'src/assets/images/image7.png'
-import Image8 from 'src/assets/images/image8.png'
-import Image9 from 'src/assets/images/image9.png'
 
-import { DocsDetail, DocsItem, docsDetails, docsItems } from './utils'
 import './index.scss'
-import UserFlow from './Pages/UserFlow'
-import FairProtocolOverview from './Pages/FairProtocolOverview'
-import Features from './Pages/Features'
-import SupportedNetworks from './Pages/SupportedNetworks'
 import BatchAutionsOverview from './Pages/BatchAutionsOverview'
 import Benefits from './Pages/Benefits'
-import UseCases from './Pages/UseCases'
-import VestedTokens from './Pages/VestedTokens'
+import FairProtocolOverview from './Pages/FairProtocolOverview'
+import Faq from './Pages/Faq'
+import Features from './Pages/Features'
+import Github from './Pages/Github'
 import ParticipatingRequirements from './Pages/ParticipatingRequirements'
+import PrivateAuctions from './Pages/PrivateAuctions'
+import SettlingAuctions from './Pages/SettlingAuctions'
 import StartingRequirements from './Pages/StartingRequirements'
+import SupportedNetworks from './Pages/SupportedNetworks'
+import UseCases from './Pages/UseCases'
+import UserFlow from './Pages/UserFlow'
 import UsingScripts from './Pages/UsingScripts'
 import UsingUI from './Pages/UsingUI'
-import SettlingAuctions from './Pages/SettlingAuctions'
-import Github from './Pages/Github'
-import PrivateAuctions from './Pages/PrivateAuctions'
-import Faq from './Pages/Faq'
+import VestedTokens from './Pages/VestedTokens'
+import { DocsDetail, DocsItem, docsDetails, docsItems } from './utils'
 
 const Docs: React.FC = () => {
   const isMobileOrTablet = useMediaQuery('(max-width:960px)')
@@ -53,52 +41,52 @@ const Docs: React.FC = () => {
     switch (currentDocsDetailIndex) {
       case 0:
         setPageComponent(<FairProtocolOverview />)
-        break;
+        break
       case 1:
         setPageComponent(<Features />)
-        break;
+        break
       case 2:
         setPageComponent(<SupportedNetworks />)
-        break;
+        break
       case 3:
         setPageComponent(<BatchAutionsOverview />)
-        break;
+        break
       case 4:
         setPageComponent(<Benefits />)
-        break;
+        break
       case 5:
         setPageComponent(<UseCases />)
-        break;
+        break
       case 6:
         setPageComponent(<VestedTokens />)
-        break;
+        break
       case 7:
         setPageComponent(<ParticipatingRequirements />)
-        break;
+        break
       case 8:
         setPageComponent(<UserFlow />)
-        break;
+        break
       case 9:
         setPageComponent(<StartingRequirements />)
-        break;
+        break
       case 10:
         setPageComponent(<UsingScripts />)
-        break;
+        break
       case 11:
         setPageComponent(<UsingUI />)
-        break;
+        break
       case 12:
         setPageComponent(<SettlingAuctions />)
-        break;
+        break
       case 13:
         setPageComponent(<PrivateAuctions />)
-        break;
+        break
       case 14:
         setPageComponent(<Faq />)
-        break;
+        break
       default:
         setPageComponent(<Github />)
-        break;
+        break
     }
   }, [currentDocsDetailIndex])
 
@@ -134,37 +122,6 @@ const Docs: React.FC = () => {
 
   const isCurrentPageSelected = (categoryIndex: number, itemIndex: number) => {
     return currentDocsDetailIndex == docsItems[categoryIndex].starting + itemIndex
-  }
-
-  const getImageForText = (image: String) => {
-    switch (image) {
-      case 'Image1':
-        return Image1
-      case 'Image2':
-        return Image2
-      case 'Image3':
-        return Image3
-      case 'Image4':
-        return Image4
-      case 'Image5':
-        return Image5
-      case 'Image6':
-        return Image6
-      case 'Image7':
-        return Image7
-      case 'Image8':
-        return Image8
-      case 'Image9':
-        return Image9
-      case 'Image10':
-        return Image10
-      case 'Image11':
-        return Image11
-      case 'Image12':
-        return Image12
-      default:
-        break
-    }
   }
 
   return (

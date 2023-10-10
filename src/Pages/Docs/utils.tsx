@@ -568,9 +568,7 @@ export const docsDetails: DocsDetail[] = [
         'c. If the clearing price ends up being 3000 DAI per ETH, you will receive 1000* 1/3000 ETH = 1/3 ETH',
         'two-spacing',
       ],
-      [
-        '4. How do I claim my tokens from the auction?',
-      ],
+      ['4. How do I claim my tokens from the auction?'],
       [
         'a. Bidders: After the auction has ended, and the settlement transaction has been executed, click on the claim button on the interface.',
         'one-spacing',
