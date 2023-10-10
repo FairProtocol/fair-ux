@@ -37,7 +37,7 @@ jobs:
       - name: Install Surge Globally      
         run: npm install --global surge
       - name: Deploy to Surge
-        run: surge  ./dist fair-protocol-${{ github.ref_name }}.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge  ./dist fair-protocol-${{ steps.extract_branch.outputs.branch }}.surge.sh --token ${{ secrets.SURGE_TOKEN }}
       - name: Add comment to PR
         uses: actions/github-script@v6
         if: always()

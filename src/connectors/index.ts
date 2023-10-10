@@ -19,11 +19,13 @@ import {
   polygon,
   polygonMumbai,
   sepolia,
+  zkSync,
+  zkSyncTestnet,
 } from './../utils/networkConfig'
 import { INFURA_KEY, IS_PROD, WALLET_CONNECT_PROJECT_ID } from '../constants/config'
 
-const mainnetChains = [mainnet, gnosis, polygon, avalanche, bsc, base]
-const testnetChains = [polygonMumbai, sepolia, goerli, baseGoerli]
+const mainnetChains = [mainnet, gnosis, polygon, avalanche, bsc, base, zkSync]
+const testnetChains = [polygonMumbai, sepolia, goerli, baseGoerli, zkSyncTestnet]
 
 const chainInstance: Chain[] = [...mainnetChains]
 if (!IS_PROD) {
