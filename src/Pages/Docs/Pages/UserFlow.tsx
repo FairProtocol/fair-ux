@@ -4,7 +4,7 @@ import Image9 from 'src/assets/images/image9.png'
 import Image10 from 'src/assets/images/image10.png'
 import Image11 from 'src/assets/images/image11.png'
 import Image12 from 'src/assets/images/image12.png'
-import './index.scss'
+import '../index.scss'
 
 const UserFlow: React.FC = () => {
     return (

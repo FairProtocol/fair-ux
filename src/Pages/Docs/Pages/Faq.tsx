@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 import Image12 from 'src/assets/images/image12.png'
-import './index.scss'
+import '../index.scss'
 
 const Faq: React.FC = () => {
   return (

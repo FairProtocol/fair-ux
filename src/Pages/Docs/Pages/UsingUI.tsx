@@ -5,7 +5,7 @@ import Image5 from 'src/assets/images/image1.png'
 import Image4 from 'src/assets/images/image4.png'
 import Image3 from 'src/assets/images/image3.png'
 import Image6 from 'src/assets/images/image6.png'
-import './index.scss'
+import '../index.scss'
 
 const UsingUI: React.FC = () => {
   return (

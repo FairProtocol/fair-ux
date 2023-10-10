@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material'
-import './index.scss'
+import '../index.scss'
 
 const PrivateAuctions: React.FC = () => {
   return (
