@@ -100,7 +100,7 @@ export const docsDetails: DocsDetail[] = [
       [
         [
           '1. Front running (MEV) resistant -',
-          'Fair Protocolprevents front-running bots from interfering with sales by not allowing them to purchase tokens early and sell later at a higher price. In contrast to AMM solutions, the auction mechanism does not allow miners to extract value from users by using sandwich attacks.',
+          'Fair Protocol prevents front-running bots from interfering with sales by not allowing them to purchase tokens early and sell later at a higher price. In contrast to AMM solutions, the auction mechanism does not allow miners to extract value from users by using sandwich attacks.',
         ],
       ],
       [
@@ -128,25 +128,25 @@ export const docsDetails: DocsDetail[] = [
     category: 'Batch Auctions',
     text: [
       [
-        'Fair Protocol is a permissionless piece of infrastructure and some of the use cases one can initiate as an user include-',
+        'Fair Protocol is a permissionless piece of infrastructure and some of the use cases one can initiate as a user include:',
       ],
       [
         [
-          '1. Token Sales-',
+          '1. Token Sales -',
           'Fair Protocol builds on the proven success in token sales (IDOs) that Gnosis Auction and Gnosis Protocol v1 (Mesa) had. It brings similar benefits in terms of fair price finding and frontrunning resistance and provides a user friendly system for participation.',
         ],
         'one-spacing',
       ],
       [
         [
-          '2. Collateral Shortfall Event-',
+          '2. Collateral Shortfall Event -',
           'Many lending protocols still don’t have a mechanism to auction off assets in case of a shortfall in collateral to pay lenders. Fair Protocol can work as a platform in which other smart contracts trigger auctions to raise funds for re-collateralization.',
         ],
         'one-spacing',
       ],
       [
         [
-          '3. All price-finding events-',
+          '3. All price-finding events -',
           'Whether it is a large sale of tokens on a DAO’s treasury, zero-coupon bonds, or any other event that requires a fair price-finding method, Fair Protocol can provide the right avenue and features to meet the needs.',
         ],
         'one-spacing',
@@ -161,7 +161,7 @@ export const docsDetails: DocsDetail[] = [
         'Fair Protocol offers a unique method to sell vested tokens. Vested tokens allow projects and investors to align incentives over a longer period and hence are a great bootstrapping tool for new projects.',
       ],
       [
-        'Note that vested token implementations are not trivial, as the vesting period can be bypassed if the sale is not carried out properly. E.g., if the vested token distribution allows smart contract addresses to participate, any claim on future vested tokens can be tokenized with special smart contract. These tokenized claims would then allow everyone to trade the vested tokens immediately. Fair Protocol has a unique feature that allows the auctioneer to allowlist only EOA account, which can not tokenize any future claims in a trustless setup. This ensures that the vested tokens sold can not be made liquid without any further trust assumptions.',
+        'Note that vested token implementations are not trivial, as the vesting period can be bypassed if the sale is not carried out properly. E.g., if the vested token distribution allows smart contract addresses to participate, any claim on future vested tokens can be tokenized with a special smart contract. These tokenized claims would then allow everyone to trade the vested tokens immediately. Fair Protocol has a unique feature that allows the auctioneer to allowlist only EOA account, which can not tokenize any future claims in a trustless setup. This ensures that the vested tokens sold can not be made liquid without any further trust assumptions.',
       ],
       ['Vested token contracts', 'title-bold'],
       [
@@ -178,9 +178,9 @@ export const docsDetails: DocsDetail[] = [
         '2. Declare the necessary exceptions for the transfer restrictions: Auctioneer + Fair Protocol contract.',
         'one-spacing',
       ],
-      ['3. Start a new private auction via the launch-auction section.', 'one-spacing'],
+      ['3. Start a new private auction via the create-auction section.', 'one-spacing'],
       [
-        '4. Only allowlist participants that are EAO accounts (and, if it applies, satisfy the needed KYC-level).',
+        '4. Only allowlist participants that are EOA accounts (and, if it applies, satisfy the needed KYC-level).',
         'one-spacing',
       ],
     ],
@@ -418,7 +418,7 @@ export const docsDetails: DocsDetail[] = [
     title: 'Using UI',
     category: 'Starting an Auction',
     text: [
-      ['We highly recommend using the UI to launch auctions. To launch an auction'],
+      ['We highly recommend using the UI to launch auctions. To launch an auction:'],
       [
         '1. Ensure your wallet is connected to the site. Click the Create Auction link in the website header. This will redirect you to the launch page',
         'one-spacing',
@@ -435,7 +435,7 @@ export const docsDetails: DocsDetail[] = [
         'Image5',
       ],
       [
-        '4. Do note that if you are creating a Private Auction, you will need to toggle the Is Private Auction input. For a Private Auction, a signing address is required to whitelist any participating addresses in the specific auction. Once the auction is launched, you will be able to sign addresses on a separate page at the link below.',
+        '4. Do note that if you are creating a Private Auction, you will need to toggle the Is Private Auction input. For a Private Auction, a signing address is required to whitelist any participating addresses in the specific auction. Once the auction is launched, you will be able to sign addresses on a separate page at this link below.',
         'one-spacing',
         'Image3',
       ],
@@ -469,7 +469,7 @@ export const docsDetails: DocsDetail[] = [
       ['yarn hardhat clearAuction --auction-id INSERT_AUCTION_ID_HERE --network $NETWORK', 'code'],
       [
         [
-          '2. Using UI:',
+          '2. Using UI script:',
           'Our user-friendly UI allows you to easily settle auctions at the click of a button. Simply enter the auction ID of your launched auction and then click on the “Settle Auction” button.',
         ],
         'one-spacing',
@@ -569,7 +569,7 @@ export const docsDetails: DocsDetail[] = [
         'two-spacing',
       ],
       [
-        '4. How do I claim my tokens from the auction?4. How do I claim my tokens from the auction?',
+        '4. How do I claim my tokens from the auction?',
       ],
       [
         'a. Bidders: After the auction has ended, and the settlement transaction has been executed, click on the claim button on the interface.',
