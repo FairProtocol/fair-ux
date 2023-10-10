@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
@@ -25,12 +25,82 @@ import Image9 from 'src/assets/images/image9.png'
 
 import { DocsDetail, DocsItem, docsDetails, docsItems } from './utils'
 import './index.scss'
+import UserFlow from './UserFlow'
+import FairProtocolOverview from './FairProtocolOverview'
+import Features from './Features'
+import SupportedNetworks from './SupportedNetworks'
+import BatchAutionsOverview from './BatchAutionsOverview'
+import Benefits from './Benefits'
+import UseCases from './UseCases'
+import VestedTokens from './VestedTokens'
+import ParticipatingRequirements from './ParticipatingRequirements'
+import StartingRequirements from './StartingRequirements'
+import UsingScripts from './UsingScripts'
+import UsingUI from './UsingUI'
+import SettlingAuctions from './SettlingAuctions'
+import Github from './Github'
+import PrivateAuctions from './PrivateAuctions'
+import Faq from './Faq'
 
 const Docs: React.FC = () => {
   const isMobileOrTablet = useMediaQuery('(max-width:960px)')
 
   const [expanded, setExpanded] = useState(false)
   const [currentDocsDetailIndex, setCurrentDocsDetailIndex] = useState(0)
+  const [pageComponent, setPageComponent] = useState(<FairProtocolOverview />)
+
+  useEffect(() => {
+    switch (currentDocsDetailIndex) {
+      case 0:
+        setPageComponent(<FairProtocolOverview />)
+        break;
+      case 1:
+        setPageComponent(<Features />)
+        break;
+      case 2:
+        setPageComponent(<SupportedNetworks />)
+        break;
+      case 3:
+        setPageComponent(<BatchAutionsOverview />)
+        break;
+      case 4:
+        setPageComponent(<Benefits />)
+        break;
+      case 5:
+        setPageComponent(<UseCases />)
+        break;
+      case 6:
+        setPageComponent(<VestedTokens />)
+        break;
+      case 7:
+        setPageComponent(<ParticipatingRequirements />)
+        break;
+      case 8:
+        setPageComponent(<UserFlow />)
+        break;
+      case 9:
+        setPageComponent(<StartingRequirements />)
+        break;
+      case 10:
+        setPageComponent(<UsingScripts />)
+        break;
+      case 11:
+        setPageComponent(<UsingUI />)
+        break;
+      case 12:
+        setPageComponent(<SettlingAuctions />)
+        break;
+      case 13:
+        setPageComponent(<PrivateAuctions />)
+        break;
+      case 14:
+        setPageComponent(<Faq />)
+        break;
+      default:
+        setPageComponent(<Github />)
+        break;
+    }
+  }, [currentDocsDetailIndex])
 
   const toggleExpanded = () => {
     setExpanded(!expanded)
@@ -147,24 +217,7 @@ const Docs: React.FC = () => {
             </AccordionDetails>
           </Accordion>
           <div className="docs_details">
-            <Typography className="docs_details_category">
-              {docsDetails[currentDocsDetailIndex].category}
-            </Typography>
-            <Typography className="docs_details_title">
-              {docsDetails[currentDocsDetailIndex].title}
-            </Typography>
-            {docsDetails[currentDocsDetailIndex].text.map((line, index) => (
-              <>
-                <Typography className={`docs_details_text ${line[1]}`} key={index}>
-                  {line[0]}
-                </Typography>
-                {line[2] && (
-                  <div className="docs_details_image_wrapper">
-                    <img className="docs_details_image" src={getImageForText(line[2] as String)} />
-                  </div>
-                )}
-              </>
-            ))}
+            {pageComponent}
             <div className="docs_details_divider"></div>
             <div className="docs_navigation">
               {currentDocsDetailIndex > 0 && (
@@ -226,33 +279,7 @@ const Docs: React.FC = () => {
             style={{ marginRight: '7em', marginLeft: '3em', width: '100%' }}
           >
             <div className="docs_details_wrapper">
-              <Typography className="docs_details_category">
-                {docsDetails[currentDocsDetailIndex].category}
-              </Typography>
-              <Typography className="docs_details_title">
-                {docsDetails[currentDocsDetailIndex].title}
-              </Typography>
-              {docsDetails[currentDocsDetailIndex].text.map((line, index) => (
-                <>
-                  <Typography className={`docs_details_text ${line[1]}`} key={index}>
-                    {Array.isArray(line[0]) ? (
-                      <>
-                        <span className="title-bold">{line[0][0]}</span> {line[0][1]}
-                      </>
-                    ) : (
-                      line[0]
-                    )}
-                  </Typography>
-                  {line[2] && (
-                    <div className="docs_details_image_wrapper">
-                      <img
-                        className="docs_details_image"
-                        src={getImageForText(line[2] as String)}
-                      />
-                    </div>
-                  )}
-                </>
-              ))}
+              {pageComponent}
               <div className="docs_details_divider"></div>
               <div className="docs_navigation">
                 {currentDocsDetailIndex > 0 && (
