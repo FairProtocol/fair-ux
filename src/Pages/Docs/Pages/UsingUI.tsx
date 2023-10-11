@@ -45,7 +45,15 @@ const UsingUI: React.FC = () => {
           4. Do note that if you are creating a Private Auction, you will need to toggle the Is
           Private Auction input. For a Private Auction, a signing address is required to whitelist
           any participating addresses in the specific auction. Once the auction is launched, you
-          will be able to sign addresses on a separate page at this link below.
+          will be able to sign addresses on a separate page at{' '}
+          <a
+            href="https://fairprotocol.eth.limo/#/private-auction-signer"
+            rel="noreferrer"
+            target="_blank"
+          >
+            this link below
+          </a>
+          .
         </Typography>
         <div className="docs_details_image_wrapper">
           <img className="docs_details_image" src={Image3} />

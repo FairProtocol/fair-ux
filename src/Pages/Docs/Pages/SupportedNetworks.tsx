@@ -24,7 +24,11 @@ const SupportedNetworks: React.FC = () => {
         <Typography className="docs_details_text one-spacing">Coming Soon</Typography>
         <Typography className="docs_details_text two-spacing">
           We have a couple more mainnets and testnets coming soon including Arbitrum and Specular.
-          Follow our Twitter to be updated!
+          Follow our{' '}
+          <a href="https://twitter.com/Fair_Auction" rel="noreferrer" target="_blank">
+            Twitter
+          </a>{' '}
+          to be updated!
         </Typography>
       </>
     </div>

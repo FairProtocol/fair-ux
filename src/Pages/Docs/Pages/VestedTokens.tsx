@@ -40,7 +40,23 @@ const VestedTokens: React.FC = () => {
           Further additions like linear vesting schedules can also be applied.
         </Typography>
         <Typography className="docs_details_text">
-          An example of a vested token can be found here with its associated auction.
+          An example of a vested token can be found{' '}
+          <a
+            href="https://etherscan.io/address/0x0C033bb39e67eB598D399C06A8A519498dA1Cec9#code"
+            rel="noreferrer"
+            target="_blank"
+          >
+            here
+          </a>{' '}
+          with its associated{' '}
+          <a
+            href="https://fairprotocol.eth.limo/#/auction?auctionId=34&chainId=1#topAnchor"
+            rel="noreferrer"
+            target="_blank"
+          >
+            auction
+          </a>
+          .
         </Typography>
         <Typography className="docs_details_text title-bold">
           To start an auction for vested tokens
@@ -53,7 +69,11 @@ const VestedTokens: React.FC = () => {
           Protocol contract.
         </Typography>
         <Typography className="docs_details_text one-spacing">
-          3. Start a new private auction via the create-auction section.
+          3. Start a new private auction via the{' '}
+          <a href="https://fairprotocol.eth.limo/#/create-auction" rel="noreferrer" target="_blank">
+            create-auction
+          </a>{' '}
+          section.
         </Typography>
         <Typography className="docs_details_text one-spacing">
           4. Only allowlist participants that are EOA accounts (and, if it applies, satisfy the

@@ -18,7 +18,11 @@ const ParticipatingRequirements: React.FC = () => {
         </Typography>
         <Typography className="docs_details_text">
           For beginners or new users, we highly recommend using Metamask. To learn how to create and
-          use a metamask wallet, click here.
+          use a metamask wallet, click{' '}
+          <a href="https://metamask.io/" rel="noreferrer" target="_blank">
+            here
+          </a>
+          .
         </Typography>
         <Typography className="docs_details_text">
           Depending on the auction, you would also need to have the correct tokens to take part in
